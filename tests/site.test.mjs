@@ -1,31 +1,16 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 
-import {
-  nextReviewIndex,
-  selectedPanelState,
-  toggleExpandedState,
-  preventStaticFormSubmission,
-} from '../js/main.js';
-
-test('toggleExpandedState flips the disclosed state', () => {
-  assert.equal(toggleExpandedState(false), true);
-  assert.equal(toggleExpandedState(true), false);
+test('published page uses the original Bitrix page markup instead of a reconstruction', () => {
+  const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+  assert.match(html, /page--anesthesia-v2/);
+  assert.match(html, /anesthesia-and-sedation__heading/);
+  assert.match(html, /\/local\/build\/styles\./);
+  assert.doesNotMatch(html, /class="hero__grid"/);
 });
 
-test('selectedPanelState selects exactly the requested panel', () => {
-  assert.deepEqual(selectedPanelState(3, 1), [false, true, false]);
-  assert.deepEqual(selectedPanelState(3, 2), [false, false, true]);
-});
-
-test('nextReviewIndex stops at both slider boundaries', () => {
-  assert.equal(nextReviewIndex(0, -1, 3), 0);
-  assert.equal(nextReviewIndex(0, 1, 3), 1);
-  assert.equal(nextReviewIndex(2, 1, 3), 2);
-});
-
-test('preventStaticFormSubmission cancels submission', () => {
-  let prevented = false;
-  preventStaticFormSubmission({ preventDefault: () => { prevented = true; } });
-  assert.equal(prevented, true);
+test('source snapshot resolves original root-relative assets against the client site', () => {
+  const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+  assert.match(html, /<base href="https:\/\/www\.mc-podmoskovie\.ru\/">/);
 });
