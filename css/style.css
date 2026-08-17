@@ -48,8 +48,9 @@ p{margin:0 0 18px}
 
 .hero{padding-top:70px;overflow:hidden}
 .hero__grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(320px,.75fr);align-items:center;min-height:530px}
+.hero__grid>div:first-child{position:relative;z-index:2;min-width:0}
 .hero__lead{font-size:21px;max-width:780px;margin:32px 0;color:#455e67}
-.hero__art{position:relative;height:480px;display:grid;place-items:center}
+.hero__art{position:relative;z-index:1;height:480px;display:grid;place-items:center}
 .hero__circle{position:absolute;width:440px;height:440px;border-radius:50%;background:var(--mist);box-shadow:0 0 0 32px #f6fcfc}
 .hero__art:before,.hero__art:after{content:"";position:absolute;border:1px solid #c9eeee;border-radius:50%;width:510px;height:510px}
 .hero__art:after{width:590px;height:590px}
