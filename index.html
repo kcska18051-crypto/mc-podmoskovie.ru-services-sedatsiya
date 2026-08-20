@@ -351,6 +351,15 @@ body {
 .ac-copy,
 .ac-copy-list { font-size: 16px; }
 .ac-toggle { font-size: 15px; }
+.cta--control .cta__text ul {
+  margin-top: 24px;
+  margin-bottom: 0;
+}
+.cta--control .cta__text li {
+  line-height: 1.4;
+  margin-bottom: 6px !important;
+}
+.cta--control .cta__text li:last-child { margin-bottom: 0 !important; }
 
 @media (max-width: 760px) {
   .ac-heading { font-size: 30px; }
@@ -359,6 +368,7 @@ body {
   .ac-copy,
   .ac-copy-list { font-size: 15px; }
   .ac-toggle { font-size: 14px; }
+  .cta--control .cta__text ul { margin-top: 20px; }
 }
 </style></head>
 
@@ -491,7 +501,7 @@ body {
     </section>
 
 
-    <section class="cta">
+    <section class="cta cta--control">
     <div class="cta__wrap container">
         <div class="cta__body">
             <h2 class="cta__heading title title--secondary">
