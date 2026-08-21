@@ -3,7 +3,7 @@
             <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title itemprop="headline">Седация при лечении зубов для взрослых и детей я Ярославле - центр стоматология «Подмосковье» </title>
+        <title itemprop="headline">Седация при лечении зубов для взрослых и детей в Ярославле - центр стоматология «Подмосковье» </title>
         <meta name="format-detection" content="telephone=no">
         <meta name="cmsmagazine" content="5763cb4475f5ecfe5599cd6d743fb9d7">
         <meta name="keywords" content="платные стоматологические услуги">
@@ -55,7 +55,7 @@
 
         
                 
-    <meta property="og:title" content="Седация при лечении зубов для взрослых и детей я Ярославле - центр стоматология «Подмосковье» ">
+    <meta property="og:title" content="Седация при лечении зубов для взрослых и детей в Ярославле - центр стоматология «Подмосковье» ">
     <meta property="og:image" content="/local/templates/base/favicons/Social.jpg">
     <meta property="og:url" content="https://www.mc-podmoskovie.ru/services/sedatsiya/">
     <link rel="apple-touch-icon" sizes="180x180" href="/local/templates/base/favicons/apple-touch-icon.png">
@@ -340,10 +340,25 @@ body {
 .title,
 .engage__heading,
 .reviews__heading,
+.answers__index,
+.answers__label,
 .ac-heading,
 .ac-criterion-title,
 .ac-method-name {
   font-family: SiteUbuntu, Ubuntu, sans-serif;
+}
+.theater--empty { display: none !important; }
+.reviews--static .swiper-wrapper { transform: none !important; }
+.reviews--static .swiper-slide {
+  width: 100% !important;
+  margin-right: 0 !important;
+}
+.reviews--static .swiper-slide[hidden] { display: none !important; }
+.static-form-note {
+  margin: 14px 0 0;
+  color: #697578;
+  font-size: 14px;
+  line-height: 1.5;
 }
 .ac-heading { font-size: 38px; }
 .ac-criterion-title { font-size: 20px; }
@@ -936,7 +951,7 @@ body {
         </div>
     </section>
 
-    <section class="theater container">
+    <section class="theater theater--empty container">
         <h2 class="theater__heading title">
             Видео
         </h2>
@@ -966,12 +981,12 @@ body {
         <div class="engage__field">
             <div class="input">
                 <input class="input__widget" type="hidden" name="form_id" value="21">
-                <input class="input__widget" type="text" name="form_text_115" placeholder="Ваше имя">
+                <input class="input__widget" type="text" name="form_text_115" placeholder="Ваше имя" autocomplete="name" required>
             </div>
         </div>
         <div class="engage__field">
             <div class="input input--expandable">
-                <input class="input__widget" type="tel" name="form_text_116" placeholder="Номер телефона" inputmode="text">
+                <input class="input__widget" type="tel" name="form_text_116" placeholder="Номер телефона" inputmode="tel" autocomplete="tel" required>
             </div>
         </div>
     </div>
@@ -996,6 +1011,7 @@ body {
             </button>
         </div>
     </div>
+    <p class="static-form-note">После нажатия откроется Telegram клиники. Введённые данные не передаются через демо-страницу.</p>
 </form>
         </div>
     </div>
@@ -1450,7 +1466,7 @@ body {
         details.hidden = !willExpand;
         toggle.setAttribute('aria-expanded', String(willExpand));
         label.textContent = willExpand ? 'Свернуть подробное сравнение' : 'Показать подробное сравнение';
-        count.textContent = willExpand ? 'все разделы открыты' : 'ещё 4 раздела';
+        count.textContent = willExpand ? 'все разделы открыты' : 'ещё 3 раздела';
         arrow.textContent = willExpand ? '↑' : '↓';
       });
     })();</script><script data-faq-behavior="">(() => {
@@ -1490,5 +1506,93 @@ body {
             }
           });
         });
+      });
+    })();</script><script data-doctor-tabs-behavior="">(() => {
+      const group = document.querySelector('.opinions .pins');
+      if (!group) return;
+      const navigation = group.querySelector('.pins__navigation');
+      const tabs = Array.from(navigation?.querySelectorAll('.pins__tab') || []);
+      const panels = Array.from(group.querySelectorAll('.pins__bodies > .pins__item'));
+      if (!navigation || tabs.length !== panels.length) return;
+
+      navigation.setAttribute('role', 'tablist');
+      const activate = (activeIndex) => {
+        tabs.forEach((tab, index) => {
+          const isActive = index === activeIndex;
+          tab.classList.toggle('pins__tab--current', isActive);
+          tab.setAttribute('role', 'tab');
+          tab.setAttribute('aria-selected', String(isActive));
+          tab.setAttribute('tabindex', isActive ? '0' : '-1');
+          panels[index].classList.toggle('pins__item--current', isActive);
+          panels[index].hidden = !isActive;
+        });
+      };
+
+      tabs.forEach((tab, index) => {
+        const tabId = `doctor-tab-${index + 1}`;
+        const panelId = `doctor-panel-${index + 1}`;
+        tab.id = tabId;
+        tab.setAttribute('aria-controls', panelId);
+        panels[index].id = panelId;
+        panels[index].setAttribute('role', 'tabpanel');
+        panels[index].setAttribute('aria-labelledby', tabId);
+        tab.addEventListener('click', () => activate(index));
+      });
+      activate(0);
+    })();</script><script data-reviews-behavior="">(() => {
+      const reviews = document.querySelector('.reviews');
+      if (!reviews) return;
+      const slides = Array.from(reviews.querySelectorAll('.swiper-slide'));
+      const previous = reviews.querySelector('.swiper-button-prev');
+      const next = reviews.querySelector('.swiper-button-next');
+      const current = reviews.querySelector('.swiper-pagination-current');
+      const total = reviews.querySelector('.swiper-pagination-total');
+      if (!slides.length || !previous || !next || !current || !total) return;
+
+      reviews.classList.add('reviews--static');
+      let activeIndex = 0;
+      const render = () => {
+        slides.forEach((slide, index) => {
+          const isActive = index === activeIndex;
+          slide.hidden = !isActive;
+          slide.classList.toggle('swiper-slide-active', isActive);
+          slide.classList.toggle('swiper-slide-next', index === activeIndex + 1);
+          slide.setAttribute('aria-hidden', String(!isActive));
+        });
+        current.textContent = String(activeIndex + 1);
+        total.textContent = String(slides.length);
+        const atStart = activeIndex === 0;
+        const atEnd = activeIndex === slides.length - 1;
+        previous.classList.toggle('swiper-button-disabled', atStart);
+        next.classList.toggle('swiper-button-disabled', atEnd);
+        previous.setAttribute('aria-disabled', String(atStart));
+        next.setAttribute('aria-disabled', String(atEnd));
+      };
+      const move = (direction) => {
+        activeIndex = Math.max(0, Math.min(slides.length - 1, activeIndex + direction));
+        render();
+      };
+      const bindControl = (control, direction) => {
+        control.setAttribute('role', 'button');
+        control.setAttribute('tabindex', '0');
+        control.addEventListener('click', () => move(direction));
+        control.addEventListener('keydown', (event) => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            move(direction);
+          }
+        });
+      };
+      bindControl(previous, -1);
+      bindControl(next, 1);
+      render();
+    })();</script><script data-form-fallback-behavior="">(() => {
+      const form = document.querySelector('form[data-js-form]');
+      if (!form) return;
+      form.dataset.staticFallback = 'telegram';
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        if (!form.reportValidity()) return;
+        window.location.assign('https://t.me/mcpodmoskovie_bot');
       });
     })();</script></body></html>
