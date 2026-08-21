@@ -47,8 +47,8 @@ test('static preview removes known visual regressions', () => {
 
   assert.equal((html.match(/ещё 3 раздела/g) ?? []).length, 2);
   assert.doesNotMatch(html, /ещё 4 раздела/);
-  assert.match(html, /class="theater theater--empty container"/);
-  assert.match(html, /\.theater--empty\s*\{\s*display:\s*none/);
+  assert.match(html, /<section class="theater container">\s*<h2 class="theater__heading title">\s*Видео\s*<\/h2>\s*<\/section>/s);
+  assert.doesNotMatch(html, /theater--empty/);
   assert.match(html, /\.answers__label[^}]+font-family:\s*SiteUbuntu/s);
   assert.match(html, /для взрослых и детей в Ярославле/);
   assert.doesNotMatch(html, /для взрослых и детей я Ярославле/);
