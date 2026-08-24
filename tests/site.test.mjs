@@ -47,7 +47,7 @@ test('static preview removes known visual regressions', () => {
 
   assert.equal((html.match(/ещё 3 раздела/g) ?? []).length, 2);
   assert.doesNotMatch(html, /ещё 4 раздела/);
-  assert.match(html, /<section class="theater container">\s*<h2 class="theater__heading title">\s*Видео\s*<\/h2>\s*<\/section>/s);
+  assert.match(html, /<section class="theater container">\s*<h2 class="theater__heading title">\s*Видео\s*<\/h2>\s*<div class="video-grid">/s);
   assert.doesNotMatch(html, /theater--empty/);
   assert.match(html, /\.answers__label[^}]+font-family:\s*SiteUbuntu/s);
   assert.match(html, /для взрослых и детей в Ярославле/);
@@ -65,4 +65,29 @@ test('approved content corrections are present', () => {
   assert.doesNotMatch(html, /индивидуальной памятке врача/);
   assert.match(html, /assets\/anesthesiologist-control-banner\.png/);
   assert.doesNotMatch(html, /Почему до&nbsp;недавнего времени общий наркоз/);
+});
+
+test('video section embeds all eight approved VK clips', () => {
+  const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+  const ids = [
+    '456241100', '456241491', '456241327', '456241063',
+    '456241204', '456241175', '456241399', '456241520',
+  ];
+  const titles = [
+    'В чём разница между анестезией, седацией и наркозом?',
+    'Лечение зубов во сне у детей',
+    'Соболева Юлия Александровна — врач-анестезиолог-реаниматолог',
+    'Соков Андрей Александрович — анестезиолог',
+    'Что взять с собой на лечение зубов во сне?',
+    'Куликов Евгений Андреевич — врач-анестезиолог',
+    'Анестезиолог отвечает на вопросы пациентов',
+    'Отзыв пациента о лечении во сне',
+  ];
+
+  assert.equal((html.match(/class="video-card"/g) ?? []).length, 8);
+  assert.equal((html.match(/loading="lazy"/g) ?? []).length, 8);
+  for (const id of ids) {
+    assert.match(html, new RegExp(`video_ext\\.php\\?oid=-202085834&amp;id=${id}`));
+  }
+  for (const title of titles) assert.ok(html.includes(title));
 });
