@@ -53,3 +53,16 @@ test('static preview removes known visual regressions', () => {
   assert.match(html, /для взрослых и детей в Ярославле/);
   assert.doesNotMatch(html, /для взрослых и детей я Ярославле/);
 });
+
+test('approved content corrections are present', () => {
+  const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+
+  assert.match(html, /а из-за волнения, страха повысилось давление\s*<\/div>/);
+  assert.doesNotMatch(html, /а из-за волнения, страха повысилось давление\./);
+  assert.match(html, /антидот Дантролен/);
+  assert.doesNotMatch(html, /Дентролен/);
+  assert.match(html, /Следуйте индивидуальной памятке\.<\/p>/);
+  assert.doesNotMatch(html, /индивидуальной памятке врача/);
+  assert.match(html, /assets\/anesthesiologist-control-banner\.png/);
+  assert.doesNotMatch(html, /Почему до&nbsp;недавнего времени общий наркоз/);
+});
