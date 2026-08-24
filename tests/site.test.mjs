@@ -67,27 +67,25 @@ test('approved content corrections are present', () => {
   assert.doesNotMatch(html, /Почему до&nbsp;недавнего времени общий наркоз/);
 });
 
-test('video section embeds all eight approved VK clips', () => {
+test('video section renders five approved vertical VK clips responsively', () => {
   const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
-  const ids = [
-    '456241100', '456241491', '456241327', '456241063',
-    '456241204', '456241175', '456241399', '456241520',
-  ];
+  const keptIds = ['456241100', '456241491', '456241204', '456241399', '456241520'];
+  const removedIds = ['456241327', '456241063', '456241175'];
   const titles = [
     'В чём разница между анестезией, седацией и наркозом?',
     'Лечение зубов во сне у детей',
-    'Соболева Юлия Александровна — врач-анестезиолог-реаниматолог',
-    'Соков Андрей Александрович — анестезиолог',
     'Что взять с собой на лечение зубов во сне?',
-    'Куликов Евгений Андреевич — врач-анестезиолог',
     'Анестезиолог отвечает на вопросы пациентов',
     'Отзыв пациента о лечении во сне',
   ];
 
-  assert.equal((html.match(/class="video-card"/g) ?? []).length, 8);
-  assert.equal((html.match(/loading="lazy"/g) ?? []).length, 8);
-  for (const id of ids) {
-    assert.match(html, new RegExp(`video_ext\\.php\\?oid=-202085834&amp;id=${id}`));
-  }
+  assert.equal((html.match(/class="video-card"/g) ?? []).length, 5);
+  assert.equal((html.match(/loading="lazy"/g) ?? []).length, 5);
+  for (const id of keptIds) assert.match(html, new RegExp(`video_ext\\.php\\?oid=-202085834&amp;id=${id}`));
+  for (const id of removedIds) assert.doesNotMatch(html, new RegExp(`video_ext\\.php\\?oid=-202085834&amp;id=${id}`));
   for (const title of titles) assert.ok(html.includes(title));
+  assert.match(html, /\.video-grid\s*\{[^}]*grid-template-columns:\s*repeat\(5,/s);
+  assert.match(html, /\.video-card__media\s*\{[^}]*aspect-ratio:\s*9\s*\/\s*16/s);
+  assert.match(html, /@media \(max-width:\s*1199px\)[\s\S]*?\.video-grid\s*\{[^}]*repeat\(3,/);
+  assert.match(html, /@media \(max-width:\s*767px\)[\s\S]*?\.video-grid\s*\{[^}]*grid-template-columns:\s*1fr/);
 });

@@ -361,16 +361,16 @@ body {
 }
 .video-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 46px 28px;
-  margin-top: 46px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 38px 20px;
+  margin-top: 38px;
 }
 .video-card { min-width: 0; }
 .video-card__media {
   overflow: hidden;
   width: 100%;
-  aspect-ratio: 16 / 9;
-  border-radius: 16px;
+  aspect-ratio: 9 / 16;
+  border-radius: 14px;
   background: #202020;
 }
 .video-card__iframe {
@@ -380,22 +380,30 @@ body {
   border: 0;
 }
 .video-card__title {
-  margin: 16px 0 0;
+  margin: 14px 0 0;
   color: #009eb4;
   font-family: SiteUbuntu, Ubuntu, sans-serif;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 500;
-  line-height: 1.15;
+  line-height: 1.25;
 }
-@media (max-width: 991px) {
-  .video-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .video-card__title { font-size: 22px; }
+@media (max-width: 1199px) {
+  .video-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 40px 22px;
+  }
+  .video-card__title { font-size: 20px; }
 }
 @media (max-width: 767px) {
   .video-grid {
     grid-template-columns: 1fr;
     gap: 32px;
     margin-top: 28px;
+  }
+  .video-card {
+    width: 100%;
+    max-width: 420px;
+    margin-inline: auto;
   }
   .video-card__media { border-radius: 12px; }
   .video-card__title {
@@ -1000,27 +1008,9 @@ body {
             </article>
             <article class="video-card">
                 <div class="video-card__media">
-                    <iframe class="video-card__iframe" src="https://vk.com/video_ext.php?oid=-202085834&amp;id=456241327&amp;hd=2" title="Соболева Юлия Александровна — врач-анестезиолог-реаниматолог" loading="lazy" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock" allowfullscreen></iframe>
-                </div>
-                <h3 class="video-card__title">Соболева Юлия Александровна — врач-анестезиолог-реаниматолог</h3>
-            </article>
-            <article class="video-card">
-                <div class="video-card__media">
-                    <iframe class="video-card__iframe" src="https://vk.com/video_ext.php?oid=-202085834&amp;id=456241063&amp;hd=2" title="Соков Андрей Александрович — анестезиолог" loading="lazy" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock" allowfullscreen></iframe>
-                </div>
-                <h3 class="video-card__title">Соков Андрей Александрович — анестезиолог</h3>
-            </article>
-            <article class="video-card">
-                <div class="video-card__media">
                     <iframe class="video-card__iframe" src="https://vk.com/video_ext.php?oid=-202085834&amp;id=456241204&amp;hd=2" title="Что взять с собой на лечение зубов во сне?" loading="lazy" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock" allowfullscreen></iframe>
                 </div>
                 <h3 class="video-card__title">Что взять с собой на лечение зубов во сне?</h3>
-            </article>
-            <article class="video-card">
-                <div class="video-card__media">
-                    <iframe class="video-card__iframe" src="https://vk.com/video_ext.php?oid=-202085834&amp;id=456241175&amp;hd=2" title="Куликов Евгений Андреевич — врач-анестезиолог" loading="lazy" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock" allowfullscreen></iframe>
-                </div>
-                <h3 class="video-card__title">Куликов Евгений Андреевич — врач-анестезиолог</h3>
             </article>
             <article class="video-card">
                 <div class="video-card__media">
