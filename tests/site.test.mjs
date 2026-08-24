@@ -89,3 +89,16 @@ test('video section renders five approved vertical VK clips responsively', () =>
   assert.match(html, /@media \(max-width:\s*1199px\)[\s\S]*?\.video-grid\s*\{[^}]*repeat\(3,/);
   assert.match(html, /@media \(max-width:\s*767px\)[\s\S]*?\.video-grid\s*\{[^}]*grid-template-columns:\s*1fr/);
 });
+
+test('comparison cell items do not end with periods', () => {
+  const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+  const start = html.indexOf('<section class="ac-comparison"');
+  const end = html.indexOf('<section class="cta">', start);
+  const comparison = html.slice(start, end);
+
+  assert.ok(start >= 0, 'comparison section must be present');
+  assert.ok(end > start, 'comparison section end must be present');
+  assert.doesNotMatch(comparison, /\.<\/p>/);
+  assert.match(comparison, /Дети от 3 лет<\/p>/);
+  assert.match(comparison, /До 5 000 ₽<\/p>/);
+});
