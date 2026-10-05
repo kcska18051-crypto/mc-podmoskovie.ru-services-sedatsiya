@@ -436,7 +436,115 @@ body {
   .ac-toggle { font-size: 14px; }
   .cta--control .cta__text ul { margin-top: 20px; }
 }
-</style></head>
+</style>
+<style id="sedation-page-updates">
+  .sedation-procedures,
+  .sedation-steps { margin-top: 96px; margin-bottom: 96px; }
+  .sedation-procedures { margin-bottom: 0; }
+  .sedation-procedures__body {
+    display: grid;
+    grid-template-columns: minmax(0, 1.08fr) minmax(340px, .92fr);
+    gap: 64px;
+    align-items: center;
+  }
+  .sedation-procedures__intro {
+    max-width: 760px;
+    margin: 0 0 30px;
+    color: #676767;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+  .sedation-procedures__list { display: grid; gap: 19px; margin: 0; padding: 0; list-style: none; }
+  .sedation-procedures__item {
+    position: relative;
+    margin: 0;
+    padding-left: 30px;
+    color: #5f5f5f;
+    font-size: 19px;
+    line-height: 1.45;
+  }
+  .sedation-procedures__item::before {
+    position: absolute;
+    top: .55em;
+    left: 0;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #1fbbc7;
+    content: "";
+  }
+  .sedation-procedures__photo { overflow: hidden; border-radius: 22px; background: #eefafa; }
+  .sedation-procedures__photo img { display: block; width: 100%; min-height: 470px; object-fit: cover; }
+  .sedation-steps { padding: 90px 0; background: #f5fbfc; }
+  .sedation-steps .title { margin-bottom: 18px; }
+  .sedation-steps__subtitle { margin: 0 0 42px; color: #777; font-size: 20px; line-height: 1.45; }
+  .sedation-steps__list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+  .sedation-steps__item {
+    display: flex;
+    min-height: 238px;
+    flex-direction: column;
+    padding: 28px;
+    border: 2px solid #1fbbc7;
+    border-radius: 16px;
+    background: #fff;
+  }
+  .sedation-steps__number {
+    display: flex;
+    width: 36px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    border-radius: 50%;
+    background: #e8f9fa;
+    color: #159ca7;
+    font-weight: 700;
+  }
+  .sedation-steps__title { margin-bottom: 14px; color: #555; font-size: 22px; font-weight: 500; line-height: 1.2; }
+  .sedation-steps__text { margin: 0; color: #777; font-size: 17px; line-height: 1.45; }
+  .sedation-steps__item--action { justify-content: center; border-color: #1fbbc7; background: #1fbbc7; }
+  .sedation-steps__item--action .sedation-steps__title,
+  .sedation-steps__item--action .sedation-steps__text { color: #fff; }
+  .sedation-steps__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+  .sedation-steps__actions .button { min-width: 0; padding: 13px 20px; border: 2px solid #fff; font-size: 15px; cursor: pointer; }
+  .sedation-steps__actions .button:first-child { background: #fff; color: #159ca7; }
+  .sedation-steps__actions .button:last-child { background: transparent; color: #fff; }
+  .sedation-consultation .cta__price { margin-top: 22px; color: #555; font-size: 22px; line-height: 1.35; }
+  .sedation-consultation .cta__price strong { color: #1fbbc7; font-size: 28px; }
+  .sedation-faq__actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 26px; }
+  .sedation-faq__download {
+    display: inline-flex;
+    min-height: 48px;
+    align-items: center;
+    padding: 10px 22px;
+    border: 2px solid #1fbbc7;
+    border-radius: 28px;
+    color: #159ca7;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  @media (max-width: 1023px) {
+    .sedation-procedures__body { grid-template-columns: minmax(0, 1fr) minmax(300px, .8fr); gap: 36px; }
+    .sedation-steps__list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 767px) {
+    .sedation-procedures { margin-top: 64px; margin-bottom: 0; }
+    .sedation-procedures__body,
+    .sedation-steps__list { grid-template-columns: 1fr; }
+    .sedation-procedures__body { gap: 32px; }
+    .sedation-procedures__intro,
+    .sedation-steps__subtitle { font-size: 17px; }
+    .sedation-procedures__item { font-size: 16px; }
+    .sedation-procedures__photo img { min-height: 0; }
+    .sedation-steps { margin-top: 64px; margin-bottom: 64px; padding: 58px 0; }
+    .sedation-steps__item { min-height: 0; padding: 24px; }
+    .sedation-steps__actions { flex-direction: column; }
+    .sedation-steps__actions .button,
+    .sedation-faq__actions .button,
+    .sedation-faq__download { width: 100%; justify-content: center; text-align: center; }
+  }
+</style>
+</head>
 
 <body class=" page_secondary" itemscope="" itemtype="https://schema.org/WebPage"><div class="layout"><div class="main"><header class="header header--over" itemscope="" itemtype="https://schema.org/WPHeader">
                     <div class="header__wrapper">
@@ -721,6 +829,92 @@ body {
 
     </section>
 
+    <section class="sedation-procedures container" data-sedation-procedures>
+        <h2 class="title">Какие процедуры можно провести во сне</h2>
+        <div class="sedation-procedures__body">
+            <div class="sedation-procedures__content">
+                <p class="sedation-procedures__intro">
+                    Лечение во сне может применяться при длительных и объёмных стоматологических вмешательствах. Подходящий метод обезболивания определяют стоматолог и анестезиолог после консультации.
+                </p>
+                <ul class="sedation-procedures__list">
+                    <li class="sedation-procedures__item"><b>Лечение зубов</b> — в том числе нескольких зубов за один приём.</li>
+                    <li class="sedation-procedures__item"><b>Удаление зубов</b> — сложных зубов, зубов мудрости или нескольких зубов одновременно.</li>
+                    <li class="sedation-procedures__item"><b>Имплантация</b> — установка одного или нескольких имплантатов.</li>
+                    <li class="sedation-procedures__item"><b>All-on-4 и All-on-6</b> — комплексное хирургическое лечение и протезирование.</li>
+                    <li class="sedation-procedures__item"><b>Костная пластика и синус-лифтинг</b> — подготовка к имплантации.</li>
+                    <li class="sedation-procedures__item"><b>Детская стоматология</b> — лечение по медицинским показаниям, если ребёнку сложно спокойно перенести приём.</li>
+                </ul>
+            </div>
+            <div class="sedation-procedures__photo">
+                <img src="/upload/all-on-4-landing/wakeup.png" alt="Пациентка после стоматологического лечения">
+            </div>
+        </div>
+    </section>
+
+    <section class="sedation-steps" data-sedation-steps>
+        <div class="container">
+            <h2 class="title">Как проходит лечение во сне</h2>
+            <p class="sedation-steps__subtitle">От первой консультации до возвращения домой — пять понятных этапов под контролем специалистов.</p>
+            <div class="sedation-steps__list">
+                <article class="sedation-steps__item" data-step-card>
+                    <span class="sedation-steps__number">1</span>
+                    <div class="sedation-steps__title">Консультация</div>
+                    <p class="sedation-steps__text">Стоматолог составляет план лечения, а анестезиолог оценивает состояние здоровья и отвечает на вопросы.</p>
+                </article>
+                <article class="sedation-steps__item" data-step-card>
+                    <span class="sedation-steps__number">2</span>
+                    <div class="sedation-steps__title">Анализы и обследование</div>
+                    <p class="sedation-steps__text">Пациент проходит назначенное обследование. Перечень анализов и срок их действия уточняет врач.</p>
+                </article>
+                <article class="sedation-steps__item" data-step-card>
+                    <span class="sedation-steps__number">3</span>
+                    <div class="sedation-steps__title">Допуск анестезиолога</div>
+                    <p class="sedation-steps__text">Анестезиолог изучает результаты обследования и подтверждает возможность проведения лечения во сне.</p>
+                </article>
+                <article class="sedation-steps__item" data-step-card>
+                    <span class="sedation-steps__number">4</span>
+                    <div class="sedation-steps__title">День лечения</div>
+                    <p class="sedation-steps__text">Пациент соблюдает индивидуальные рекомендации. Во время процедуры состояние непрерывно контролирует анестезиолог.</p>
+                </article>
+                <article class="sedation-steps__item" data-step-card>
+                    <span class="sedation-steps__number">5</span>
+                    <div class="sedation-steps__title">Пробуждение и восстановление</div>
+                    <p class="sedation-steps__text">После лечения пациент отдыхает под наблюдением специалистов и получает рекомендации перед возвращением домой.</p>
+                </article>
+                <article class="sedation-steps__item sedation-steps__item--action" data-booking-card>
+                    <div class="sedation-steps__title">Начните с консультации</div>
+                    <p class="sedation-steps__text">Выберите удобный способ записи — через форму на сайте или в Telegram.</p>
+                    <div class="sedation-steps__actions">
+                        <button class="button" type="button" data-online-booking-link>Записаться через форму</button>
+                        <a class="button" href="https://t.me/mcpodmoskovie_bot" target="_blank" rel="noopener">Написать в Telegram</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta sedation-consultation" data-sedation-consultation>
+        <div class="cta__wrap container">
+            <div class="cta__body">
+                <h2 class="cta__heading title title--secondary">Начните с консультации стоматолога и анестезиолога</h2>
+                <div class="cta__text wysiwyg wysiwyg--larger">
+                    <p>Стоматолог составит план лечения, а анестезиолог проведёт очный осмотр, уточнит особенности здоровья и объяснит порядок подготовки.</p>
+                    <p>Результаты назначенного обследования необходимо направить на <a href="mailto:narkoz@mc-podmoskovie.ru">narkoz@mc-podmoskovie.ru</a> с указанием ФИО пациента.</p>
+                </div>
+                <div class="cta__price">Консультация анестезиолога — <strong>1 000 ₽</strong></div>
+                <div class="cta__action">
+                    <button class="button button--smaller-on-smartphone" type="button" data-online-booking-link>Записаться на консультацию</button>
+                </div>
+            </div>
+            <img class="cta__image"
+                srcset="/upload/resize_cache/iblock/f10/668_468_0/8ynih5yly45eyrjr6goiu0lrw2xq9qqi.png 2x"
+                src="/upload/resize_cache/iblock/f10/668_468_0/8ynih5yly45eyrjr6goiu0lrw2xq9qqi.png"
+                width="668"
+                height="468"
+                alt="Врач Центра стоматологии Подмосковье">
+        </div>
+    </section>
+
     <section class="cta">
     <div class="cta__wrap container">
         <div class="cta__body">
@@ -891,7 +1085,11 @@ body {
                 </button>
                 <div class="answers__dropdown">
                     <div class="wysiwyg wysiwyg--smaller">
-                        <p>Точные рекомендации зависят от выбранного метода. Перед лечением с применением пропофола или севофлурана необходима консультация анестезиолога; могут потребоваться анализы и ЭКГ. Обычно пищу исключают за 6 часов, а воду — за 2 часа до процедуры. Для ЗАКС специальная подготовка, как правило, не требуется, но плотный приём пищи перед визитом не рекомендуется. Следуйте индивидуальной памятке.</p>
+                        <p>Точные рекомендации зависят от выбранного метода. Перед лечением с применением пропофола или севофлурана необходима консультация анестезиолога; могут потребоваться анализы и ЭКГ. Соблюдайте индивидуально назначенные ограничения по еде и напиткам. Для ЗАКС специальная подготовка, как правило, не требуется, но плотный приём пищи перед визитом не рекомендуется. Следуйте индивидуальной памятке.</p>
+                        <div class="sedation-faq__actions">
+                            <button class="button button--smaller-on-smartphone" type="button" data-online-booking-link>Записаться</button>
+                            <a class="sedation-faq__download" href="https://drive.google.com/uc?export=download&amp;id=1knKn2yHapXRzkkQp9ewlyek2zH8LMDFc" target="_blank" rel="noopener">Скачать памятку по подготовке</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -949,7 +1147,7 @@ body {
             </div>
 
 
-                                <div class="answers__item">
+            <div class="answers__item">
                 <button class="answers__handler" type="button">
                     <span class="answers__index">8/</span>
                     <span class="answers__label"> Сколько стоит лечение во сне?</span>
@@ -957,6 +1155,32 @@ body {
                 <div class="answers__dropdown">
                     <div class="wysiwyg wysiwyg--smaller">
                         <p>ЗАКС — до 5&nbsp;000&nbsp;₽, лечение с применением пропофола или севофлурана — от 14&nbsp;000&nbsp;₽. Итоговая стоимость зависит от выбранного метода, продолжительности и объёма стоматологического лечения. Точную сумму врач рассчитает после консультации и составления плана лечения.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="answers__item">
+                <button class="answers__handler" type="button">
+                    <span class="answers__index">9/</span>
+                    <span class="answers__label"> Какие анализы необходимо сдать и как получить допуск?</span>
+                </button>
+                <div class="answers__dropdown">
+                    <div class="wysiwyg wysiwyg--smaller">
+                        <p>Перечень обследований назначает анестезиолог с учётом метода и состояния здоровья. Обычно требуются общий анализ крови, глюкоза крови и ЭКГ с описанием; при хирургическом лечении могут понадобиться дополнительные исследования.</p>
+                        <p>Результаты заранее направляют на <a href="mailto:narkoz@mc-podmoskovie.ru">narkoz@mc-podmoskovie.ru</a> с указанием ФИО пациента. Решение о допуске принимает анестезиолог после проверки документов и очной консультации.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="answers__item">
+                <button class="answers__handler" type="button">
+                    <span class="answers__index">10/</span>
+                    <span class="answers__label"> Как проходит день лечения?</span>
+                </button>
+                <div class="answers__dropdown">
+                    <div class="wysiwyg wysiwyg--smaller">
+                        <p>Перед процедурой команда уточняет самочувствие и выполнение индивидуальных рекомендаций. Во время лечения анестезиолог непрерывно контролирует жизненно важные показатели.</p>
+                        <p>Приходите в удобной одежде и заранее договоритесь, кто сопроводит вас домой после процедуры.</p>
                     </div>
                 </div>
             </div>
@@ -971,24 +1195,6 @@ body {
         </div>
     </section>
 
-    <section class="cta">
-    <div class="cta__wrap container">
-        <div class="cta__body">
-            <h2 class="cta__heading title title--secondary">
-                Все анализы проверяет анестезиолог и дает допуск к лечению в наркозе            </h2>
-            <div class="cta__text wysiwyg wysiwyg--larger">
-                <p>Результаты обследования направляются на почту стоматологии: <a href="mailto:narkoz@mc-podmoskovie.ru">narkoz@mc-podmoskovie.ru</a> с пометкой ФИО пациента.<br>
-<br>
-<b>При первичном обращении на услуги лечения в наркозе необходима консультация не только стоматолога, но и анестезиолога, очный осмотр.</b></p>
-            </div>
-                            <div class="cta__action">
-                    <a class="button button--smaller-on-smartphone" href="https://t.me/mcpodmoskovie_bot" target="_blank">Записаться на консультацию</a>
-                </div>
-                    </div>
-
-        <img class="cta__image" srcset="/upload/resize_cache/iblock/f10/668_468_0/8ynih5yly45eyrjr6goiu0lrw2xq9qqi.png 2x" src="https://www.mc-podmoskovie.ru/upload/resize_cache/iblock/f10/668_468_0/8ynih5yly45eyrjr6goiu0lrw2xq9qqi.png" width="668" height="468" alt="" style="">
-    </div>
-</section>
     <section class="theater container">
         <h2 class="theater__heading title">
             Видео
@@ -1028,7 +1234,7 @@ body {
     </section>
 
 
-    <div class="engage container">
+    <div class="engage container" id="online-booking">
         <div class="engage__background">
             <div class="engage__header">
                 <h2 class="engage__heading">
@@ -1649,6 +1855,12 @@ body {
       bindControl(previous, -1);
       bindControl(next, 1);
       render();
+    })();</script><script data-online-booking-behavior="">(() => {
+      const booking = document.getElementById('online-booking');
+      if (!booking) return;
+      document.querySelectorAll('[data-online-booking-link]').forEach((control) => {
+        control.addEventListener('click', () => booking.scrollIntoView({ behavior: 'smooth', block: 'start' }));
+      });
     })();</script><script data-form-fallback-behavior="">(() => {
       const form = document.querySelector('form[data-js-form]');
       if (!form) return;

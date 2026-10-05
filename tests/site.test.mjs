@@ -15,16 +15,19 @@ test('source snapshot resolves original root-relative assets against the client 
   assert.match(html, /<base href="https:\/\/www\.mc-podmoskovie\.ru\/services\/sedatsiya\/">/);
 });
 
-test('FAQ replaces the legacy safety accordion with eight patient questions', () => {
+test('FAQ covers ten patient questions including preparation and treatment day', () => {
   const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
   const faqStart = html.indexOf('Частые вопросы о лечении во сне');
   const faqEnd = html.indexOf('</div>\n\n\n        </div>\n    </section>', faqStart);
   const faq = html.slice(faqStart, faqEnd);
 
   assert.ok(faqStart >= 0, 'FAQ heading must be present');
-  assert.equal((faq.match(/class="answers__item"/g) ?? []).length, 8);
+  assert.equal((faq.match(/class="answers__item"/g) ?? []).length, 10);
   assert.match(faq, /Как выбирают подходящий метод\?/);
   assert.match(faq, /Сколько стоит лечение во сне\?/);
+  assert.match(faq, /Какие анализы необходимо сдать и как получить допуск\?/);
+  assert.match(faq, /Как проходит день лечения\?/);
+  assert.match(faq, /Скачать памятку по подготовке/);
   assert.doesNotMatch(html, /Все честно!/);
   assert.doesNotMatch(html, /Это точно безопасно\?/);
   assert.match(html, /data-faq-behavior/);
@@ -93,7 +96,7 @@ test('video section renders five approved vertical VK clips responsively', () =>
 test('comparison cell items do not end with periods', () => {
   const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
   const start = html.indexOf('<section class="ac-comparison"');
-  const end = html.indexOf('<section class="cta">', start);
+  const end = html.indexOf('data-sedation-procedures', start);
   const comparison = html.slice(start, end);
 
   assert.ok(start >= 0, 'comparison section must be present');
@@ -101,4 +104,37 @@ test('comparison cell items do not end with periods', () => {
   assert.doesNotMatch(comparison, /\.<\/p>/);
   assert.match(comparison, /Дети от 3 лет<\/p>/);
   assert.match(comparison, /До 5 000 ₽<\/p>/);
+});
+
+test('new patient journey follows the comparison table in the approved order', () => {
+  const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+  const prices = html.indexOf('<section class="ac-comparison"');
+  const procedures = html.indexOf('data-sedation-procedures');
+  const steps = html.indexOf('data-sedation-steps');
+  const consultation = html.indexOf('data-sedation-consultation');
+
+  assert.ok(prices >= 0, 'comparison and prices are present');
+  assert.ok(prices < procedures, 'procedures follow prices');
+  assert.ok(procedures < steps, 'five-step journey follows procedures');
+  assert.ok(steps < consultation, 'consultation banner follows journey');
+});
+
+test('journey has five stages and a booking card with form and Telegram', () => {
+  const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+
+  assert.equal((html.match(/data-step-card/g) ?? []).length, 5);
+  assert.equal((html.match(/data-booking-card/g) ?? []).length, 1);
+  assert.match(html, /data-online-booking-link[^>]*>Записаться через форму/);
+  assert.match(html, /href="https:\/\/t\.me\/mcpodmoskovie_bot"[^>]*>Написать в Telegram/);
+  assert.match(html, /data-sedation-consultation[\s\S]*Консультация анестезиолога[\s\S]*1 000 ₽/);
+  assert.match(html, /class="engage container" id="online-booking"/);
+  assert.match(html, /data-online-booking-behavior/);
+});
+
+test('new blocks include responsive scoped styles', () => {
+  const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+
+  assert.match(html, /<style id="sedation-page-updates">/);
+  assert.match(html, /\.sedation-steps__list/);
+  assert.match(html, /@media \(max-width: 767px\)/);
 });
