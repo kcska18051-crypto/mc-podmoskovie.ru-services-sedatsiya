@@ -96,7 +96,7 @@ test('video section renders five approved vertical VK clips responsively', () =>
 test('comparison cell items do not end with periods', () => {
   const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
   const start = html.indexOf('<section class="ac-comparison"');
-  const end = html.indexOf('data-sedation-procedures', start);
+  const end = html.indexOf('data-sedation-consultation', start);
   const comparison = html.slice(start, end);
 
   assert.ok(start >= 0, 'comparison section must be present');
@@ -114,9 +114,9 @@ test('new patient journey follows the comparison table in the approved order', (
   const consultation = html.indexOf('data-sedation-consultation');
 
   assert.ok(prices >= 0, 'comparison and prices are present');
-  assert.ok(prices < procedures, 'procedures follow prices');
+  assert.ok(prices < consultation, 'consultation follows prices');
+  assert.ok(consultation < procedures, 'procedures follow consultation');
   assert.ok(procedures < steps, 'five-step journey follows procedures');
-  assert.ok(steps < consultation, 'consultation banner follows journey');
 });
 
 test('journey has five stages and a booking card with form and Telegram', () => {
@@ -137,4 +137,12 @@ test('new blocks include responsive scoped styles', () => {
   assert.match(html, /<style id="sedation-page-updates">/);
   assert.match(html, /\.sedation-steps__list/);
   assert.match(html, /@media \(max-width: 767px\)/);
+});
+
+test('procedures block uses the clinic-based sedation scene with heading spacing', () => {
+  const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+
+  assert.match(html, /data-sedation-procedures[\s\S]*assets\/sedation-treatment-scene\.png/);
+  assert.match(html, /\.sedation-procedures\s*>\s*\.title\s*\{[^}]*margin-bottom:\s*36px/s);
+  assert.match(html, /@media \(max-width:\s*767px\)[\s\S]*\.sedation-procedures\s*>\s*\.title\s*\{[^}]*margin-bottom:\s*24px/s);
 });

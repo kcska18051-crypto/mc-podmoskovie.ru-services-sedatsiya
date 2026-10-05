@@ -441,6 +441,7 @@ body {
   .sedation-procedures,
   .sedation-steps { margin-top: 96px; margin-bottom: 96px; }
   .sedation-procedures { margin-bottom: 0; }
+  .sedation-procedures > .title { margin-bottom: 36px; }
   .sedation-procedures__body {
     display: grid;
     grid-template-columns: minmax(0, 1.08fr) minmax(340px, .92fr);
@@ -529,6 +530,7 @@ body {
   }
   @media (max-width: 767px) {
     .sedation-procedures { margin-top: 64px; margin-bottom: 0; }
+    .sedation-procedures > .title { margin-bottom: 24px; }
     .sedation-procedures__body,
     .sedation-steps__list { grid-template-columns: 1fr; }
     .sedation-procedures__body { gap: 32px; }
@@ -829,6 +831,28 @@ body {
 
     </section>
 
+    <section class="cta sedation-consultation" data-sedation-consultation>
+        <div class="cta__wrap container">
+            <div class="cta__body">
+                <h2 class="cta__heading title title--secondary">Начните с консультации стоматолога и анестезиолога</h2>
+                <div class="cta__text wysiwyg wysiwyg--larger">
+                    <p>Стоматолог составит план лечения, а анестезиолог проведёт очный осмотр, уточнит особенности здоровья и объяснит порядок подготовки.</p>
+                    <p>Результаты назначенного обследования необходимо направить на <a href="mailto:narkoz@mc-podmoskovie.ru">narkoz@mc-podmoskovie.ru</a> с указанием ФИО пациента.</p>
+                </div>
+                <div class="cta__price">Консультация анестезиолога — <strong>1 000 ₽</strong></div>
+                <div class="cta__action">
+                    <button class="button button--smaller-on-smartphone" type="button" data-online-booking-link>Записаться на консультацию</button>
+                </div>
+            </div>
+            <img class="cta__image"
+                srcset="/upload/resize_cache/iblock/f10/668_468_0/8ynih5yly45eyrjr6goiu0lrw2xq9qqi.png 2x"
+                src="/upload/resize_cache/iblock/f10/668_468_0/8ynih5yly45eyrjr6goiu0lrw2xq9qqi.png"
+                width="668"
+                height="468"
+                alt="Врач Центра стоматологии Подмосковье">
+        </div>
+    </section>
+
     <section class="sedation-procedures container" data-sedation-procedures>
         <h2 class="title">Какие процедуры можно провести во сне</h2>
         <div class="sedation-procedures__body">
@@ -846,7 +870,7 @@ body {
                 </ul>
             </div>
             <div class="sedation-procedures__photo">
-                <img src="/upload/all-on-4-landing/wakeup.png" alt="Пациентка после стоматологического лечения">
+                <img src="https://kcska18051-crypto.github.io/mc-podmoskovie.ru-services-sedatsiya/assets/sedation-treatment-scene.png" alt="Лечение зубов во сне под контролем анестезиолога">
             </div>
         </div>
     </section>
@@ -890,28 +914,6 @@ body {
                     </div>
                 </article>
             </div>
-        </div>
-    </section>
-
-    <section class="cta sedation-consultation" data-sedation-consultation>
-        <div class="cta__wrap container">
-            <div class="cta__body">
-                <h2 class="cta__heading title title--secondary">Начните с консультации стоматолога и анестезиолога</h2>
-                <div class="cta__text wysiwyg wysiwyg--larger">
-                    <p>Стоматолог составит план лечения, а анестезиолог проведёт очный осмотр, уточнит особенности здоровья и объяснит порядок подготовки.</p>
-                    <p>Результаты назначенного обследования необходимо направить на <a href="mailto:narkoz@mc-podmoskovie.ru">narkoz@mc-podmoskovie.ru</a> с указанием ФИО пациента.</p>
-                </div>
-                <div class="cta__price">Консультация анестезиолога — <strong>1 000 ₽</strong></div>
-                <div class="cta__action">
-                    <button class="button button--smaller-on-smartphone" type="button" data-online-booking-link>Записаться на консультацию</button>
-                </div>
-            </div>
-            <img class="cta__image"
-                srcset="/upload/resize_cache/iblock/f10/668_468_0/8ynih5yly45eyrjr6goiu0lrw2xq9qqi.png 2x"
-                src="/upload/resize_cache/iblock/f10/668_468_0/8ynih5yly45eyrjr6goiu0lrw2xq9qqi.png"
-                width="668"
-                height="468"
-                alt="Врач Центра стоматологии Подмосковье">
         </div>
     </section>
 
