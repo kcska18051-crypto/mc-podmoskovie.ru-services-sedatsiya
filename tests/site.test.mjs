@@ -34,6 +34,27 @@ test('FAQ covers ten patient questions including preparation and treatment day',
   assert.match(html, /answers__item--expanded/);
 });
 
+test('preparation memo is the first FAQ answer with rules and both actions', () => {
+  const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+  const faqStart = html.indexOf('Частые вопросы о лечении во сне');
+  const faqEnd = html.indexOf('</div>\n\n\n        </div>\n    </section>', faqStart);
+  const faq = html.slice(faqStart, faqEnd);
+  const preparation = faq.indexOf('Как подготовиться к лечению?');
+  const method = faq.indexOf('Как выбирают подходящий метод?');
+  const nextItem = faq.indexOf('class="answers__item"', preparation + 1);
+  const preparationItem = faq.slice(preparation, nextItem);
+
+  assert.ok(preparation >= 0 && preparation < method, 'preparation must be the first FAQ question');
+  assert.match(preparationItem, /минимум за 2 дня/i);
+  assert.match(preparationItem, /за 4–8 часов/);
+  assert.match(preparationItem, /за 3 часа/);
+  assert.match(preparationItem, /за 2 часа/);
+  assert.match(preparationItem, /сопровождение/);
+  assert.match(preparationItem, /за 5 дней/);
+  assert.match(preparationItem, /data-online-booking-link[^>]*>Записаться<\/button>/);
+  assert.match(preparationItem, /Скачать памятку по подготовке<\/a>/);
+});
+
 test('static preview restores the original interactive controls', () => {
   const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
 
