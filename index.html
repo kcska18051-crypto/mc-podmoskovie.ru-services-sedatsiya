@@ -439,8 +439,7 @@ body {
 </style>
 <style id="sedation-page-updates">
   .sedation-procedures,
-  .sedation-steps { margin-top: 96px; margin-bottom: 96px; }
-  .sedation-procedures { margin-bottom: 0; }
+  .sedation-steps { margin-top: 0; margin-bottom: 0; }
   .sedation-procedures > .title { margin-bottom: 36px; }
   .sedation-procedures__body {
     display: grid;
@@ -529,7 +528,6 @@ body {
     .sedation-steps__list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   }
   @media (max-width: 767px) {
-    .sedation-procedures { margin-top: 64px; margin-bottom: 0; }
     .sedation-procedures > .title { margin-bottom: 24px; }
     .sedation-procedures__body,
     .sedation-steps__list { grid-template-columns: 1fr; }
@@ -538,7 +536,8 @@ body {
     .sedation-steps__subtitle { font-size: 17px; }
     .sedation-procedures__item { font-size: 16px; }
     .sedation-procedures__photo img { min-height: 0; }
-    .sedation-steps { margin-top: 64px; margin-bottom: 64px; padding: 58px 0; }
+    .sedation-steps { padding: 58px 0; }
+    .sedation-consultation .cta__price strong { font-size: 22px; white-space: nowrap; }
     .sedation-steps__item { min-height: 0; padding: 24px; }
     .sedation-steps__actions { flex-direction: column; }
     .sedation-steps__actions .button,

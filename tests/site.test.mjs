@@ -146,3 +146,10 @@ test('procedures block uses the clinic-based sedation scene with heading spacing
   assert.match(html, /\.sedation-procedures\s*>\s*\.title\s*\{[^}]*margin-bottom:\s*36px/s);
   assert.match(html, /@media \(max-width:\s*767px\)[\s\S]*\.sedation-procedures\s*>\s*\.title\s*\{[^}]*margin-bottom:\s*24px/s);
 });
+
+test('new sections use the site vertical rhythm and the mobile price stays together', () => {
+  const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+
+  assert.match(html, /\.sedation-procedures,\s*\.sedation-steps\s*\{[^}]*margin-top:\s*0[^}]*margin-bottom:\s*0/s);
+  assert.match(html, /@media \(max-width:\s*767px\)[\s\S]*\.sedation-consultation \.cta__price strong\s*\{[^}]*font-size:\s*22px[^}]*white-space:\s*nowrap/s);
+});
