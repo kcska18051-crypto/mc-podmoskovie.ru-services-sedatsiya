@@ -172,5 +172,6 @@ test('new sections use the site vertical rhythm and the mobile price stays toget
   const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
 
   assert.match(html, /\.sedation-procedures,\s*\.sedation-steps\s*\{[^}]*margin-top:\s*0[^}]*margin-bottom:\s*0/s);
+  assert.match(html, /\.sedation-steps \.title\s*\{[^}]*margin-top:\s*0[^}]*margin-bottom:\s*18px/s);
   assert.match(html, /@media \(max-width:\s*767px\)[\s\S]*\.sedation-consultation \.cta__price strong\s*\{[^}]*font-size:\s*22px[^}]*white-space:\s*nowrap/s);
 });
