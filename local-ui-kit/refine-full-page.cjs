@@ -1,0 +1,4 @@
+const fs=require('fs'),path=require('path');const root=__dirname;
+const file=path.join(root,'build-full-page.cjs');let s=fs.readFileSync(file,'utf8');s=s.replace('style="height:${height}px"','style="height:100px"');fs.writeFileSync(file,s);
+require('./build-full-page.cjs');
+const out=path.join(root,'implant-full-preview.html');s=fs.readFileSync(out,'utf8');s=s.replace(/<input[^>]+type=["']hidden["'][^>]*>/gi,'').replace(/<form\b[^>]*>/gi,'<form action="#" data-demo-form>');s=s.replace(/\b(href|src)\s*=\s*"\/([^" ]*)"/gi,(_,a,b)=>`${a}="https://www.mc-podmoskovie.ru/${b}"`);s=s.replace(/\bsrcset="([^"]*)"/gi,(_,v)=>'srcset="'+v.replace(/(^|,\s*)(\/[^ ,]+)/g,(_,a,b)=>a+'https://www.mc-podmoskovie.ru'+b)+'"');s=s.replace(/<title\b[^>]*>[\s\S]*?<\/title>/gi,'<title>Имплантация — полный макет изменений</title>');fs.writeFileSync(out,s);
