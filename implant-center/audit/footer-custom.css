@@ -1,0 +1,65 @@
+
+/*.modal-overlay-form {*/
+
+/*    position: fixed;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+
+/*}*/
+.doctors-page-modal{
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    min-width: 1100px;
+}
+.open-form-doctors{
+    cursor: pointer;
+}
+
+.branches .swiper-button-prev:after, .branches .swiper-rtl .swiper-button-next:after, .branches .swiper-button-next:after, .branches .swiper-rtl .swiper-button-prev:after{
+    content: unset;
+}
+.person__heading{
+    font-size: 22px;
+}
+.video-thumb__preview::after{
+    all:unset;
+}
+.waysite{
+    display: none;
+}
+
+@media all and (max-width: 1100px) {
+    .doctors-page-modal{
+        min-width: 800px;
+    }
+}
+@media all and (max-width: 800px) {
+    .doctors-page-modal{
+        min-width: unset;
+    }
+}
+h3.branches__sub-heading{
+    /*display: flex;*/
+}
+@media all and (max-width: 600px) {
+    .doctors-page-modal{
+        top: 15vw;
+        left: unset;
+        transform: unset;
+    }
+    h3.branches__sub-heading{
+        display: block;
+    }
+    .dep-service-icon {
+        margin: 16px 1px -20px 16px;
+        max-width: 90px;
+    }
+    .branches__handler{
+
+    }
+
+}

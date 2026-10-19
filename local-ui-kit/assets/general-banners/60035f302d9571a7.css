@@ -1,0 +1,146 @@
+.embed-responsive {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+
+.embed-responsive::before {
+  display: block;
+  content: "";
+}
+
+.embed-responsive .embed-responsive-item, .embed-responsive iframe, .embed-responsive embed, .embed-responsive object, .embed-responsive video {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.embed-responsive-21by9::before {
+  padding-top: 42.85714%;
+}
+
+.embed-responsive-16by9::before {
+  padding-top: 56.25%;
+}
+
+.embed-responsive-16by10::before {
+  padding-top: 62.5%;
+}
+
+.embed-responsive-4by3::before {
+  padding-top: 75%;
+}
+
+.embed-responsive-1by1::before {
+  padding-top: 100%;
+}
+
+.embed-responsive-15by10::before {
+  padding-top: 66.66667%;
+}
+
+.bx-vw-yt-player {
+  display: block;
+  overflow: hidden;
+}
+
+.bx-vw-yt-player__preview {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.bx-vw-yt-player__preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bx-vw-yt-player__btn {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.2);
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  border: none;
+  transition: 0.5s;
+  display: none;
+}
+
+.bx-vw-yt-player__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bx-vw-yt-player__btn svg {
+  width: 10%;
+  height: auto;
+  animation: BxVWVideoButtonRevieal 1s ease;
+  min-width: var(--player-icon-size, 2.72rem);
+
+}
+
+.bx-vw-yt-player__btn:hover {
+  transform: scale(1.3);
+}
+
+.bx-vw-yt-player__btn-bg {
+  transition: fill 0.3s;
+  fill: var(--player-btn-bg,rgba(255, 0, 0, 0.5));
+}
+
+.bx-vw-yt-player__btn:hover .bx-vw-yt-player__btn-bg {
+  fill: var(--player-btn-bg-hover,#FF0000);
+}
+
+.bx-vw-yt-player__btn-play {
+  fill: var(--player-play-color,#fff);
+  transform: scale(0.8);
+  transition: fill 0.3s, transform 0.5s;
+  transform-origin: center;
+}
+
+.bx-vw-yt-player--iframe-load .bx-vw-yt-player__btn-bg {
+  transition: none;
+  stroke: var(--player-btn-bg-load,#FF0000);
+  fill: transparent !important;
+  stroke-width: 3px;
+  stroke-dasharray: 40;
+}
+
+.bx-vw-yt-player iframe {
+  animation: fadeOut 0.5s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.bx-vw-yt-player--iframe-loaded iframe {
+  animation: fadeIn 0.5s;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@keyframes BxVWVideoButtonRevieal {
+  0% {
+    opacity: 0;
+    transform: scaleX(1);
+  }
+  50% {
+    opacity: 1;
+  }
+  60% {
+    transform: scale3d(1.15, 1.15, 1.15);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}

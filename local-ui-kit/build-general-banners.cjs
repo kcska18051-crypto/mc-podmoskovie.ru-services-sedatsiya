@@ -1,0 +1,31 @@
+const fs=require('fs'),path=require('path');const root=__dirname;
+const source=JSON.parse(fs.readFileSync(path.join(root,'banner-source.json'),'utf8'));
+const bundle=JSON.parse(fs.readFileSync(path.join(root,'banner-assets.json'),'utf8'));
+const assetDir=path.join(root,'assets/general-banners');fs.mkdirSync(assetDir,{recursive:true});
+const assetMap=new Map();for(const asset of bundle.assets){const name=asset.id+path.extname(asset.path);const target=path.join(assetDir,name);if(asset.kind==='stylesheet'){let css=fs.readFileSync(asset.path,'utf8');css=css.replace(/url\(\s*(['"]?)([^)'"\s]+)\1\s*\)/g,(all,quote,url)=>url.startsWith('data:')?all:`url("${new URL(url,asset.url).href}")`);fs.writeFileSync(target,css);}else fs.copyFileSync(asset.path,target);assetMap.set(asset.url,'assets/general-banners/'+name);}
+const site='https://www.mc-podmoskovie.ru';
+const styles=source.styles.filter(url=>assetMap.has(url)).map(url=>`<link rel="stylesheet" href="${assetMap.get(url)}">`).join('');
+const slides=source.slides.map((html,i)=>{
+html=html.replace(/ style="width: [^"]+"/,'').replace(/ swiper-slide-active| swiper-slide-next/g,'');
+html=html.replace('Для нас большая честь быть единственной сертифицированной клиникой Nobel Biocare в Ярославской области.','Единственный в области Центр клинического мастерства Nobel Biocare.');
+html=html.replace('Единственный в регионе Центр клинического мастерства Nobel Biocare','Единственный в области Центр клинического мастерства Nobel Biocare');
+html=html.replace('Работаем с лидером индустрии, предоставляем пожизненную гарантию на импланты.','Работаем с лидером индустрии. На импланты действует пожизненная гарантия от производителей.');
+html=html.replace(/\b(src|data-src)="(\/[^"#]+)"/g,(_,attr,url)=>`${attr}="${assetMap.get(new URL(url,site).href)||new URL(url,site).href}"`);
+html=html.replace(/href="(\/[^"#]+)"/g,(_,url)=>`href="${new URL(url,site).href}"`);
+return `<h2 class="editor-label">${i+1===1?'01 · Баннер о статусе центра':'02 · Существующий баннер «Гарантия качества»'}</h2><section class="implant-benefits"><div class="swiper swiper--css-skin-equipment swiper--alt-minimalistic-controls"><div class="swiper-wrapper">${html}</div><div class="swiper-controls wrapper implant-controls" aria-label="Позиция слайда на исходной странице"><span class="preview-nav-arrow" aria-hidden="true">‹</span><div class="swiper-pagination swiper-pagination-fraction swiper-pagination-horizontal"><span class="swiper-pagination-current">${i+1}</span> / <span class="swiper-pagination-total">7</span></div><span class="preview-nav-arrow" aria-hidden="true">›</span></div></div></section>`;
+}).join('');
+const guarantee=`<h2 class="editor-label">03 · Новый отдельный блок о гарантии</h2><section class="guarantee-section" aria-labelledby="guarantee-title"><div class="guarantee-inner"><div class="guarantee-header"><span class="guarantee-icon" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="m32 5 22 9v17c0 13-10 22-22 28C20 53 10 44 10 31V14L32 5Z"/><path d="m22 31 7 7 14-15"/></svg></span><div><p class="guarantee-eyebrow">ОРИГИНАЛЬНЫЕ ИМПЛАНТЫ · ПОНЯТНЫЕ УСЛОВИЯ</p><h2 id="guarantee-title">Пожизненная гарантия на импланты<br> от производителей</h2><p class="guarantee-lead">Условия гарантии зависят от выбранной системы. Обсудим их с вами до начала лечения.</p></div></div><div class="guarantee-grid"><article><span class="guarantee-number">01</span><h3>Гарантия на имплант</h3><p>При гарантийном случае производитель заменяет изделие по условиям своей программы.</p></article><article><span class="guarantee-number">02</span><h3>Условия известны заранее</h3><p>Уточните срок и условия замены, рекомендации по уходу и график контрольных осмотров.</p></article><article><span class="guarantee-number">03</span><h3>Обратитесь в клинику</h3><p>Если возникла проблема, врач проведёт осмотр и объяснит дальнейшие действия.</p></article></div><div class="guarantee-bottom"><p>До начала лечения мы объясним, что покрывает гарантия производителя и какие условия действуют на работу клиники.</p><button type="button" data-guarantee-consultation>Обсудить гарантию с врачом <span aria-hidden="true">→</span></button></div></div></section>`;
+const preview=`<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Статус Nobel и гарантии — общая имплантация</title>${styles}<link rel="stylesheet" href="general-banners-preview.css"><link rel="stylesheet" href="task4-description.css"><script defer src="guarantee-consultation.js"></script></head><body class="page_secondary">${slides}${guarantee}<script>if(parent!==window){const report=()=>parent.postMessage({type:'general-banners-height',height:document.documentElement.scrollHeight},location.origin);new ResizeObserver(report).observe(document.body);window.addEventListener('load',report)}</script></body></html>`;
+fs.writeFileSync(path.join(root,'general-banners-preview.html'),require("./task4-description.cjs").updatePreview(preview));
+let kit=fs.readFileSync(path.join(root,'index.html'),'utf8');if(!kit.includes('id="general-banners"')){
+kit=kit.replace('3 задачи · На согласовании','4 задачи · На согласовании').replace('<span class="count">3 задачи</span>','<span class="count">4 задачи</span>');
+kit=kit.replace('03 <span>Вопросы и ответы</span></a>','03 <span>Вопросы и ответы</span></a><a class="task-nav" href="#general-banners">04 <span>Статус и гарантии</span></a>').replace('03 · Вопросы и ответы</a></details>','03 · Вопросы и ответы</a><a href="#general-banners">04 · Статус и гарантии</a></details>');
+const task=require("./task4-description.cjs").task;
+kit=kit.replace('</article></section>','</article>'+task+'</section>');
+kit=kit.replace("e.data?.type==='faq-preview-height'?'faq-preview':", "e.data?.type==='general-banners-height'?'general-banners-preview':e.data?.type==='faq-preview-height'?'faq-preview':").replace("['nobel-preview-height','pricing-preview-height','faq-preview-height']", "['nobel-preview-height','pricing-preview-height','faq-preview-height','general-banners-height']");
+fs.writeFileSync(path.join(root,'index.html'),kit);
+}
+console.log('Task 4: two original banners and standalone guarantee block');
+
+
+

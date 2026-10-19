@@ -1,0 +1,846 @@
+
+
+/* Start:/local/components/vw/likely/asset/customStyles.css?172915946364*/
+.likely button{
+    border:0;
+    /* background-color:none; */
+}
+/* End */
+
+
+/* Start:/local/components/vw/likely/asset/likely.css?17196690939733*/
+.likely,.likely__widget{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;padding:0;text-indent:0!important;list-style:none!important;font-weight:400;font-family:Helvetica Neue,Arial,sans-serif}.likely{display:inline-block}.likely__widget{margin:0;font-size:inherit}.likely{opacity:0;font-size:0!important}.likely_visible{opacity:1;transition:opacity .1s ease-in}.likely>*{display:inline-block;visibility:hidden}.likely_visible>*{visibility:inherit}.likely__widget{position:relative;white-space:nowrap}.likely__button,.likely__widget{display:inline-block}.likely__button,.likely__counter{text-decoration:none;text-rendering:optimizeLegibility;margin:0;outline:0}.likely__button{position:relative;user-select:none}.likely__counter{display:none;position:relative;font-weight:400}.likely_ready .likely__counter{display:inline-block}.likely_ready .likely__counter_empty{display:none}.likely__button,.likely__counter,.likely__icon,.likely__widget{vertical-align:top}.likely__widget{transition:background .33s ease-out,color .33s ease-out,fill .33s ease-out}.likely__widget:active,.likely__widget:focus,.likely__widget:hover{transition:none;cursor:pointer}@media (hover:none){.likely__widget:active,.likely__widget:focus,.likely__widget:hover{transition:background .33s ease-out,color .33s ease-out,fill .33s ease-out;cursor:unset}}.likely__icon{position:relative;text-align:left;display:inline-block}.likely svg{position:absolute;left:3px;top:3px;width:16px;height:16px}.likely__button,.likely__counter{line-height:inherit;cursor:inherit}.likely__button:empty{display:none}.likely__counter{text-align:center}.likely .likely__widget{color:#000;background:rgba(231,231,231,.8)}.likely .likely__counter{background-size:1px 1px;background-repeat:repeat-y;background-image:linear-gradient(to right,rgba(0,0,0,.2) 0,rgba(0,0,0,0) .5px,rgba(0,0,0,0) 100%)}.likely-light .likely__widget{color:#fff;fill:#fff;background:rgba(236,236,236,.16);text-shadow:rgba(0,0,0,.2) 0 0 .33em}.likely-light .likely__counter{background-image:linear-gradient(to right,rgba(255,255,255,.4) 0,rgba(255,255,255,0) .5px,rgba(255,255,255,0) 100%)}.likely__widget_facebook{fill:#425497}.likely__widget_facebook:active,.likely__widget_facebook:focus,.likely__widget_facebook:hover{background:rgba(207,212,229,.8)}@media (hover:none){.likely__widget_facebook:active,.likely__widget_facebook:focus,.likely__widget_facebook:hover{background:rgba(231,231,231,.8)}}.likely-light .likely__widget_facebook:active,.likely-light .likely__widget_facebook:focus,.likely-light .likely__widget_facebook:hover{text-shadow:#425497 0 0 .25em;background:rgba(66,84,151,.7)}@media (hover:none){.likely-light .likely__widget_facebook:active,.likely-light .likely__widget_facebook:focus,.likely-light .likely__widget_facebook:hover{text-shadow:rgba(0,0,0,.2) 0 0 .33em;background:rgba(236,236,236,.16)}}.likely__widget_gplus{fill:#dd4241}.likely__widget_gplus:active,.likely__widget_gplus:focus,.likely__widget_gplus:hover{background:rgba(246,207,207,.8)}@media (hover:none){.likely__widget_gplus:active,.likely__widget_gplus:focus,.likely__widget_gplus:hover{background:rgba(231,231,231,.8)}}.likely-light .likely__widget_gplus:active,.likely-light .likely__widget_gplus:focus,.likely-light .likely__widget_gplus:hover{text-shadow:#dd4241 0 0 .25em;background:rgba(221,66,65,.7)}@media (hover:none){.likely-light .likely__widget_gplus:active,.likely-light .likely__widget_gplus:focus,.likely-light .likely__widget_gplus:hover{text-shadow:rgba(0,0,0,.2) 0 0 .33em;background:rgba(236,236,236,.16)}}.likely__widget_linkedin{fill:#0077b5}.likely__widget_linkedin:active,.likely__widget_linkedin:focus,.likely__widget_linkedin:hover{background:rgba(191,221,236,.8)}@media (hover:none){.likely__widget_linkedin:active,.likely__widget_linkedin:focus,.likely__widget_linkedin:hover{background:rgba(231,231,231,.8)}}.likely-light .likely__widget_linkedin:active,.likely-light .likely__widget_linkedin:focus,.likely-light .likely__widget_linkedin:hover{text-shadow:#0077b5 0 0 .25em;background:rgba(0,119,181,.7)}@media (hover:none){.likely-light .likely__widget_linkedin:active,.likely-light .likely__widget_linkedin:focus,.likely-light .likely__widget_linkedin:hover{text-shadow:rgba(0,0,0,.2) 0 0 .33em;background:rgba(236,236,236,.16)}}.likely__widget_odnoklassniki{fill:#f6903b}.likely__widget_odnoklassniki:active,.likely__widget_odnoklassniki:focus,.likely__widget_odnoklassniki:hover{background:rgba(252,227,206,.8)}@media (hover:none){.likely__widget_odnoklassniki:active,.likely__widget_odnoklassniki:focus,.likely__widget_odnoklassniki:hover{background:rgba(231,231,231,.8)}}.likely-light .likely__widget_odnoklassniki:active,.likely-light .likely__widget_odnoklassniki:focus,.likely-light .likely__widget_odnoklassniki:hover{text-shadow:#f6903b 0 0 .25em;background:rgba(246,144,59,.7)}@media (hover:none){.likely-light .likely__widget_odnoklassniki:active,.likely-light .likely__widget_odnoklassniki:focus,.likely-light .likely__widget_odnoklassniki:hover{text-shadow:rgba(0,0,0,.2) 0 0 .33em;background:rgba(236,236,236,.16)}}.likely__widget_pinterest{fill:#bd081c}.likely__widget_pinterest:active,.likely__widget_pinterest:focus,.likely__widget_pinterest:hover{background:rgba(238,193,198,.8)}@media (hover:none){.likely__widget_pinterest:active,.likely__widget_pinterest:focus,.likely__widget_pinterest:hover{background:rgba(231,231,231,.8)}}.likely-light .likely__widget_pinterest:active,.likely-light .likely__widget_pinterest:focus,.likely-light .likely__widget_pinterest:hover{text-shadow:#bd081c 0 0 .25em;background:rgba(189,8,28,.7)}@media (hover:none){.likely-light .likely__widget_pinterest:active,.likely-light .likely__widget_pinterest:focus,.likely-light .likely__widget_pinterest:hover{text-shadow:rgba(0,0,0,.2) 0 0 .33em;background:rgba(236,236,236,.16)}}.likely__widget_telegram{fill:#34abde}.likely__widget_telegram:active,.likely__widget_telegram:focus,.likely__widget_telegram:hover{background:rgba(204,234,246,.8)}@media (hover:none){.likely__widget_telegram:active,.likely__widget_telegram:focus,.likely__widget_telegram:hover{background:rgba(231,231,231,.8)}}.likely-light .likely__widget_telegram:active,.likely-light .likely__widget_telegram:focus,.likely-light .likely__widget_telegram:hover{text-shadow:#34abde 0 0 .25em;background:rgba(52,171,222,.7)}@media (hover:none){.likely-light .likely__widget_telegram:active,.likely-light .likely__widget_telegram:focus,.likely-light .likely__widget_telegram:hover{text-shadow:rgba(0,0,0,.2) 0 0 .33em;background:rgba(236,236,236,.16)}}.likely__widget_twitter{fill:#00b7ec}.likely__widget_twitter:active,.likely__widget_twitter:focus,.likely__widget_twitter:hover{background:rgba(191,237,250,.8)}@media (hover:none){.likely__widget_twitter:active,.likely__widget_twitter:focus,.likely__widget_twitter:hover{background:rgba(231,231,231,.8)}}.likely-light .likely__widget_twitter:active,.likely-light .likely__widget_twitter:focus,.likely-light .likely__widget_twitter:hover{text-shadow:#00b7ec 0 0 .25em;background:rgba(0,183,236,.7)}@media (hover:none){.likely-light .likely__widget_twitter:active,.likely-light .likely__widget_twitter:focus,.likely-light .likely__widget_twitter:hover{text-shadow:rgba(0,0,0,.2) 0 0 .33em;background:rgba(236,236,236,.16)}}.likely__widget_vkontakte{fill:#526e8f}.likely__widget_vkontakte:active,.likely__widget_vkontakte:focus,.likely__widget_vkontakte:hover{background:rgba(211,218,227,.8)}@media (hover:none){.likely__widget_vkontakte:active,.likely__widget_vkontakte:focus,.likely__widget_vkontakte:hover{background:rgba(231,231,231,.8)}}.likely-light .likely__widget_vkontakte:active,.likely-light .likely__widget_vkontakte:focus,.likely-light .likely__widget_vkontakte:hover{text-shadow:#526e8f 0 0 .25em;background:rgba(82,110,143,.7)}@media (hover:none){.likely-light .likely__widget_vkontakte:active,.likely-light .likely__widget_vkontakte:focus,.likely-light .likely__widget_vkontakte:hover{text-shadow:rgba(0,0,0,.2) 0 0 .33em;background:rgba(236,236,236,.16)}}.likely__widget_whatsapp{fill:#25d366}.likely__widget_whatsapp:active,.likely__widget_whatsapp:focus,.likely__widget_whatsapp:hover{background:rgba(200,244,216,.8)}@media (hover:none){.likely__widget_whatsapp:active,.likely__widget_whatsapp:focus,.likely__widget_whatsapp:hover{background:rgba(231,231,231,.8)}}.likely-light .likely__widget_whatsapp:active,.likely-light .likely__widget_whatsapp:focus,.likely-light .likely__widget_whatsapp:hover{text-shadow:#25d366 0 0 .25em;background:rgba(37,211,102,.7)}@media (hover:none){.likely-light .likely__widget_whatsapp:active,.likely-light .likely__widget_whatsapp:focus,.likely-light .likely__widget_whatsapp:hover{text-shadow:rgba(0,0,0,.2) 0 0 .33em;background:rgba(236,236,236,.16)}}.likely{margin:0 -5px -10px}.likely .likely__widget{line-height:20px;font-size:14px;border-radius:3px;height:22px;margin:0 5px 10px}.likely .likely__icon{width:22px;height:22px}.likely .likely__button{padding:1px 4px 1px 0}.likely .likely__counter{padding:1px 4px}.likely-big{margin:0 -6px -12px}.likely-big .likely__widget{line-height:28px;font-size:18px;border-radius:4px;height:32px;margin:0 6px 12px}.likely-big .likely__icon{width:32px;height:32px}.likely-big .likely__button{padding:2px 6px 2px 0}.likely-big .likely__counter{padding:2px 6px}.likely-big svg{left:4px;top:4px;width:24px;height:24px}.likely-small{margin:0 -4px -8px}.likely-small .likely__widget{line-height:14px;font-size:12px;border-radius:2px;height:18px;margin:0 4px 8px}.likely-small .likely__icon{width:18px;height:18px}.likely-small .likely__button{padding:2px 3px 2px 0}.likely-small .likely__counter{padding:2px 3px}.likely-small svg{left:3px;top:3px;width:12px;height:12px}
+/* End */
+
+
+/* Start:/local/templates/base/styles.css?17569779746996*/
+--color-primary: #1fbbc7;
+a {
+    color: #1fbbc7;
+}
+
+.doctors-slider__item img.img-circle {
+    overflow: hidden;
+    max-height: 150px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.layout {
+    position: relative;
+}
+
+.floors__touch-notify {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none;
+    color: #fff;
+    font-size: 5.866666666666666vw;
+    text-align: center;
+    line-height: 1.45;
+    transition-duration: 0.3s;
+    transition-delay: 0.8s;
+}
+
+.floors__touch-notify--active {
+    opacity: 1;
+    transition-delay: 0.2s;
+}
+
+.floors__touch-notify p {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media (max-width: 991px) {
+    .floors__wrapper {
+        min-height: 500px;
+    }
+}
+
+.index-years {
+    position: relative;
+    z-index: 1;
+}
+
+@media (min-width: 1200px) {
+    .index-years {
+        margin-top: -15%;
+    }
+}
+
+.footer-text__content {
+    height: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.footer-text__content::after {
+    content: "";
+    display: block;
+    height: 40px;
+    width: 100%;
+}
+
+.footer-text__button {
+    margin: 0 auto 1rem;
+    background: none;
+    border: 0;
+    display: block;
+    outline: none;
+    opacity: 0.3;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.footer-text__button:hover {
+    opacity: 1;
+}
+
+.footer-text__button svg {
+    transition: transform 0.5s ease;
+}
+
+.footer-text__button.opened {
+    opacity: 1;
+}
+.footer-text__button.opened svg {
+    transform: rotateZ(-180deg);
+}
+
+.children-hero__content .rondoflex-btn {
+    font-size: 1.5rem;
+    font-weight: 500;
+    max-width: 450px;
+    line-height: calc(1em + 10px);
+}
+.footer__sc {
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer__sc > * {
+    margin-right: 10px;
+}
+
+.bx-vw-yt-player {
+    --player-btn-bg: rgba(0, 150, 170, 0.5);
+    --player-play-hover: var(--color-primary);
+    --player-btn-bg-hover: var(--color-primary);
+    --player-btn-bg-load: var(--color-primary);
+    --player-play-color: #fff;
+    --player-icon-size: 70px;
+}
+
+.bx-vw-yt-player__play svg {
+    box-shadow:
+        0 0 0 16px rgb(0 150 170 / 30%),
+        0 0 0 8px rgb(0 150 170 / 30%);
+    transition-duration: 0.1s;
+}
+
+@media screen and (max-width: 979px) /* Tablet */ {
+    header.header.header--inversed.header--over {
+        position: unset !important;
+    }
+}
+
+.whatsapp-button {
+    position: fixed;
+    right: 0px;
+    /*bottom: 0px;*/
+    bottom: 100px;
+    transform: translate(-50%, -50%);
+    background: #25d366; /*цвет кнопки*/
+    border-radius: 50%;
+    width: 55px; /*ширина кнопки*/
+    height: 55px; /*высота кнопки*/
+    color: #fff;
+    text-align: center;
+    line-height: 53px; /*центровка иконки в кнопке*/
+    font-size: 35px; /*размер иконки*/
+    z-index: 9999;
+}
+.whatsapp-button a {
+    color: #fff;
+}
+.whatsapp-button:before,
+.whatsapp-button:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    border: 50%;
+    border: 1px solid #25d366; /*цвет анимированных волн от кнопки*/
+    left: -20px;
+    right: -20px;
+    top: -20px;
+    bottom: -20px;
+    border-radius: 50%;
+    animation: animate 1.5s linear infinite;
+    opacity: 0;
+    backface-visibility: hidden;
+}
+
+.whatsapp-button:after {
+    animation-delay: 0.5s;
+}
+
+@media (max-width: 800px) {
+    .whatsapp-button {
+        bottom: 0px; /*отступ кнопки снизу от экрана*/
+        left: 70px; /*отступ кнопки слева от экрана(right - справа)*/
+    }
+}
+
+@keyframes animate {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+.viber-button {
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    transform: translate(-50%, -50%);
+    background: #be4bdb; /*цвет кнопки*/
+    border-radius: 50%;
+    width: 55px; /*ширина кнопки*/
+    height: 55px; /*высота кнопки*/
+    color: #fff;
+    text-align: center;
+    line-height: 53px; /*центровка иконки в кнопке*/
+    font-size: 35px; /*размер иконки*/
+    z-index: 9999;
+}
+.viber-button a {
+    color: #fff;
+}
+
+.viber-button:before,
+.viber-button:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    border: 50%;
+    border: 1px solid #be4bdb; /*цвет анимированных волн от кнопки*/
+    left: -20px;
+    right: -20px;
+    top: -20px;
+    bottom: -20px;
+    border-radius: 50%;
+    animation: animate 1.5s linear infinite;
+    opacity: 0;
+    backface-visibility: hidden;
+}
+
+.viber-button:after {
+    animation-delay: 0.5s;
+}
+
+@media (max-width: 800px) {
+    .viber-button {
+        bottom: 0px;
+        left: 190px; /*отступ кнопки слева от экрана(right - справа)*/
+    }
+}
+
+.header {
+    background-color: white !important;
+    padding: 20px 0 !important;
+}
+.header__logo1 {
+    align-self: center !important;
+    width: 500px;
+    padding-left: 40px;
+}
+.header__menu {
+    align-self: center !important;
+    margin-top: 0 !important;
+    padding-left: 30px !important;
+}
+.header__contacts {
+    align-self: center !important;
+}
+.header-menu__item u {
+    border: none;
+    color: #22bbc7;
+}
+.hidden-md-down {
+    margin: 0 !important;
+}
+html {
+    color: #57585a !important;
+    font-family: "Montserrat", sans-serif !important;
+}
+
+.link-black {
+    color: #57585a !important;
+}
+.hero__row--service {
+    padding-top: 150px !important;
+}
+.waysite {
+    padding-top: 30px !important;
+}
+
+@media (max-width: 1199px) {
+    .header__logo1 {
+        padding-left: 20px;
+        width: 393px;
+        padding-bottom: 10px;
+    }
+}
+@media (max-width: 600px) {
+    .header__logo1 {
+        padding-left: 10px;
+        width: 250px;
+        padding-bottom: 10px;
+    }
+    .header__contacts {
+        padding-bottom: 21px;
+    }
+}
+@media (max-width: 420px) {
+    .header__logo1 {
+        width: 230px;
+    }
+}
+
+.button.turquoise {
+    background-color: #1fbbc7;
+}
+.person__register {
+    display: flex;
+    justify-content: space-between;
+}
+.person__whatsapp-button {
+    background: url("https://www.mc-podmoskovie.ru/local/templates/base/whatsapp.svg");
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    margin-left: 5px;
+}
+
+/*Оформление контактов 02.09.2025*/
+.transport-info {
+    display: grid;
+    grid-template-columns: 67% 33%;
+}
+.address-info {
+    max-width: 100% !important;
+}
+.clip-item {
+    margin-bottom: 0;
+    margin-top: 50px;
+}
+@media (max-width: 767px) {
+    .transport-info {
+        display: flex;
+        flex-direction: column;
+    }
+    .clip-item {
+        margin-left: -30px;
+    }
+}
+.mrg-top {
+    margin-top: 20px !important;
+}
+
+/* End */
+
+
+/* Start:/local/templates/base/template_styles.css?17860173889321*/
+a {
+    color: #1fbbc7;
+}
+sub {
+    display: table-caption;
+}
+.department__bg {
+    object-fit: contain;
+    object-position: bottom center;
+}
+.card__doctor img {
+    max-width: 40px;
+}
+.card__spoiler-link.opened {
+    display: none;
+}
+
+@media (min-width: 1500px) {
+    .index-main-slider-v2__wrap {
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+    }
+}
+
+@media (max-width: 575px) {
+    .index-main-slider-v2__wrap {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .index-main-slider-v2__wrap {
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .index-main-slider-v2__wrap {
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+    }
+}
+@media (min-width: 1200px) and (max-width: 1499px) {
+    .wrapper {
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+    }
+}
+.header__logo1 a {
+    max-width: 100%;
+}
+.header__logo1 svg {
+    vertical-align: bottom;
+    max-width: 100%;
+}
+
+/*кнопка тг*/
+.fab.fa-telegram {
+    margin-top: 9px;
+}
+
+.telegram-button {
+    position: fixed;
+    right: 0px;
+    /*bottom: 0px;*/
+    bottom: 100px;
+    transform: translate(-50%, -50%);
+    background: #24a1de; /*цвет кнопки*/
+    border-radius: 50%;
+    width: 55px; /*ширина кнопки*/
+    height: 55px; /*высота кнопки*/
+    color: #fff;
+    text-align: center;
+    line-height: 53px; /*центровка иконки в кнопке*/
+    font-size: 35px; /*размер иконки*/
+    z-index: 9999;
+}
+.telegram-button a {
+    color: #fff;
+}
+
+.telegram-button:before,
+.telegram-button:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    border: 50%;
+    border: 1px solid #24a1de; /*цвет анимированных волн от кнопки*/
+    left: -20px;
+    right: -20px;
+    top: -20px;
+    bottom: -20px;
+    border-radius: 50%;
+    animation: animate 1.5s linear infinite;
+    opacity: 0;
+    backface-visibility: hidden;
+}
+
+.telegram-button:after {
+    animation-delay: 0.5s;
+}
+
+@media (max-width: 800px) {
+    .telegram-button {
+        bottom: 0px;
+        left: 190px; /*отступ кнопки слева от экрана(right - справа)*/
+    }
+}
+
+/**/
+
+/*противопоказания*/
+.footer-protivopokazaniya {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 30px;
+    font-size: 22px;
+}
+
+@media (max-width: 800px) {
+    .footer-protivopokazaniya {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 500px) {
+    .footer-protivopokazaniya {
+        height: 130px;
+    }
+}
+
+/**/
+/* плашка куки */
+.cookie-banner {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1200px;
+    background-color: #22bbc7;
+    border-radius: 15px;
+    padding: 15px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    font-family: Arial, sans-serif;
+    display: none;
+    justify-content: center;
+}
+
+.cookie-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.cookie-text {
+    color: white;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.cookie-btn {
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cookie-btn:hover {
+    background-color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+    .cookie-text {
+        font-size: 12px;
+    }
+
+    .cookie-btn {
+        padding: 6px 15px;
+        font-size: 12px;
+    }
+    /*.telegram-button, .whatsapp-button{*/
+    /*    z-index: 1;*/
+    /*}*/
+}
+@media (max-width: 500px) {
+    .cookie-banner {
+        bottom: 100px;
+    }
+}
+.cookie-banner a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 1px;
+}
+/**/
+
+.certificate-slider__item {
+    width: auto !important;
+}
+/**/
+.certificates {
+    display: flex;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    gap: 20px;
+}
+.stats__item--all-on-4 .certificates .stats__illustration {
+    position: unset;
+}
+.bigger-illustration {
+    transform: scale(1.02);
+}
+@media (max-width: 739.98px) {
+    .certificates {
+        position: unset;
+    }
+}
+.telegram__button {
+    background: url("https://www.mc-podmoskovie.ru/local/templates/base/telegram.svg");
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    margin-left: 5px;
+}
+.telegram__link {
+    text-decoration: none;
+    border: none;
+}
+
+/*Телеграм QR-код*/
+.qrCodeImg {
+    max-width: 440px;
+}
+#showQr {
+    cursor: pointer;
+}
+.qrPopUp .modal__container {
+    text-align: center;
+}
+@media (max-width: 768px) {
+    .qrCodePopUp {
+        min-width: 240px;
+    }
+    .qrCodeImg {
+        width: 100%;
+    }
+}
+/*кнопка макс*/
+
+.max-button {
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    transform: translate(-50%, -50%);
+    background: #360eee; /*цвет кнопки*/
+    border-radius: 50%;
+    width: 60px; /*ширина кнопки*/
+    height: 60px; /*высота кнопки*/
+    color: #fff;
+    text-align: center;
+    line-height: 53px; /*центровка иконки в кнопке*/
+    font-size: 35px; /*размер иконки*/
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.max-icon {
+    width: 35px; /* размер иконки */
+    height: 35px;
+    background-image: url("https://www.mc-podmoskovie.ru/upload/max-icon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.max-button a {
+    color: #fff;
+}
+
+.max-button:before,
+.max-button:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    border: 50%;
+    /* border: 1px solid #360eee; */
+    background: #360eee33;
+    /*цвет анимированных волн от кнопки*/
+    left: -30px;
+    right: -30px;
+    top: -30px;
+    bottom: -30px;
+    border-radius: 50%;
+    animation: animate-btn 3.2s ease-in-out 0s infinite normal none running;
+    opacity: 0;
+    backface-visibility: hidden;
+    z-index: -1;
+}
+
+@keyframes animate-btn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;    
+    }
+
+    60% {
+        opacity: 0;
+    }
+
+    80%, 95% {
+        transform: scale(1.3);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+}
+
+/* .max-button:after {
+    animation-delay: 0.5s;
+} */
+
+@media (max-width: 800px) {
+    .max-button {
+        bottom: -10px;
+        left: 50px;
+        box-shadow: rgb(54 14 238 / 70%) 0 0 10px;
+        /*отступ кнопки слева от экрана(right - справа)*/
+    }
+
+    .max-button::before, .max-button::after {
+        animation: unset;
+    }
+}
+
+/**/
+
+
+
+.all-on-4-slider .swiper-slide {
+    width: 46%;
+    padding-right: 20px;
+}
+
+.all-on-4-slider .swiper-slide img {
+    border-radius: 20px;
+}
+
+.all-on-4-slider .swiper-button-prev::after,
+.all-on-4-slider .swiper-button-next::after {
+    color: #1fbbc7;
+    background: rgba(228, 247, 250, .8);
+    border-radius: 50%;
+}
+
+.all-on-4-slider .swiper-button-prev::after {
+    padding: 11px 25px 11px 20px;
+}
+
+.all-on-4-slider .swiper-button-next::after {
+    padding: 11px 20px 11px 25px;
+}
+
+.all-on-4-slider .swiper-button-prev {
+    left: 25px;
+}
+
+.all-on-4-slider .swiper-button-next {
+    right: 25px;
+}
+
+@media (max-width:1200px) {
+    .all-on-4-slider .swiper-slide {
+        /* width: 46%; */
+        padding-right: 0;
+    }
+
+    .all-on-4-slider .swiper-controls {
+        position: relative;
+        height: 100px;
+    }
+
+    .all-on-4-slider .swiper-button-prev {
+        left: 50%;
+        transform: translate(-150%);
+    }
+
+    .all-on-4-slider .swiper-button-next {
+        left: 50%;
+        transform: translate(150%);
+    }
+
+    .all-on-4-slider .swiper-button-prev::after,
+    .all-on-4-slider .swiper-button-next::after {
+        font-size: 30px;
+
+    }
+    .all-on-4-slider .swiper-button-prev::after {
+        padding: 10px 20px 10px 15px;
+    }
+
+    .all-on-4-slider .swiper-button-next::after {
+        padding: 10px 15px 10px 20px;
+    }
+
+}
+
+.contact-icons {
+    margin-top: 20px;
+    display: flex;
+}
+
+.contact-icons a:hover {
+    color: #1fbbc7;
+}
+
+.contact-icons .contact-telegram-button {
+    margin-right: 10px;
+}
+
+.contact-icons .contact-telegram-button .fab {
+    font-size: 50px;
+    margin-top: 0;
+}
+
+.contact-icons .max-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.comagic-c-buttons__mobile-position {
+    bottom: 20px !important;
+}
+
+@media (max-width: 800px) {
+    .telegram-button {
+        bottom: 0px;
+        left: 190px;
+        /*отступ кнопки слева от экрана(right - справа)*/
+    }
+
+    .comagic-c-buttons__mobile-position {
+        /* right: 50% !important;
+        transform: translateX(50%); */
+        left: 20px !important;
+        top: unset !important;
+        width: 65px !important;
+        height: 65px !important;
+    }
+}
+/* End */
+/* /local/components/vw/likely/asset/customStyles.css?172915946364 */
+/* /local/components/vw/likely/asset/likely.css?17196690939733 */
+/* /local/templates/base/styles.css?17569779746996 */
+/* /local/templates/base/template_styles.css?17860173889321 */

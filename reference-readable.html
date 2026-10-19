@@ -1,0 +1,1043 @@
+<meta charset="utf-8">
+<title>Имплантация зубов в Ярославле</title>
+<style>
+@font-face{font-family:"Roboto";font-style:normal;font-weight:400;font-display:block;src:url([EMBEDDED]) format("woff2")}
+@font-face{font-family:"Roboto";font-style:normal;font-weight:500;font-display:block;src:url([EMBEDDED]) format("woff2")}
+@font-face{font-family:"Roboto";font-style:normal;font-weight:700;font-display:block;src:url([EMBEDDED]) format("woff2")}
+@font-face{font-family:"Ubuntu";font-style:normal;font-weight:500;font-display:block;src:url([EMBEDDED]) format("woff2")}
+
+:root{
+  /* фирменная палитра сайта клиники */
+  --teal:#1fbbc7;        /* главный — поверхности, рамки, иконки */
+  --teal-ink:#0096aa;    /* синий для текста (.text-primary сайта) */
+  --teal-deep:#006977;
+  --focus:#0096aa;
+  --on-accent:#FFFFFF;   /* текст на синей плашке */
+  --amber:#e66b06;       /* главный оранжевый */
+  --amber-deep:#be6f06;
+  --ink:#10333A;
+  --ink-soft:#43626A;
+  --paper:#FFFFFF;
+  --mist:#F2FAFB;
+  --mist-2:#b3e0e6;
+  --line:#D8E9EC;
+  --brand-1:#1fbbc7;
+  --brand-2:#0096aa;
+  --brand-3:#006977;
+  --shadow:0 2px 4px rgba(0,60,68,.06), 0 14px 40px -14px rgba(0,60,68,.18);
+}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --teal:#1fbbc7; --teal-ink:#98e6f0; --teal-deep:#b3e0e6; --focus:#98e6f0; --on-accent:#0B1F24;
+    --amber:#f08c07; --amber-deep:#f8b14a;
+    --ink:#E6F1F3; --ink-soft:#A9C3C9;
+    --paper:#0B1F24; --mist:#10292F; --mist-2:#153138;
+    --line:#22454D;
+    --shadow:0 2px 4px rgba(0,0,0,.3), 0 14px 40px -14px rgba(0,0,0,.55);
+  }
+}
+:root[data-theme="dark"]{
+  --teal:#1fbbc7; --teal-ink:#98e6f0; --teal-deep:#b3e0e6; --focus:#98e6f0; --on-accent:#0B1F24;
+  --amber:#f08c07; --amber-deep:#f8b14a;
+  --ink:#E6F1F3; --ink-soft:#A9C3C9;
+  --paper:#0B1F24; --mist:#10292F; --mist-2:#153138;
+  --line:#22454D;
+  --shadow:0 2px 4px rgba(0,0,0,.3), 0 14px 40px -14px rgba(0,0,0,.55);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:Roboto,-apple-system,Segoe UI,sans-serif;
+  font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%; display:block}
+.wrap{max-width:1140px; margin:0 auto; padding:0 26px}
+
+h1,h2,h3,.num,.eyebrow{font-family:Ubuntu,Roboto,sans-serif}
+h1{font-size:clamp(32px,4.6vw,54px); line-height:1.08; margin:0; font-weight:500; letter-spacing:-.01em; text-wrap:balance}
+h2{font-size:clamp(26px,3.4vw,40px); line-height:1.14; margin:0 0 14px; font-weight:500; letter-spacing:-.008em; text-wrap:balance}
+h3{font-size:20px; line-height:1.25; margin:0; font-weight:500}
+p{margin:0 0 14px; max-width:66ch}
+p:last-child{margin-bottom:0}
+
+section{padding:74px 0}
+section.tint{background:var(--mist)}
+@media(max-width:760px){section{padding:52px 0}}
+
+/* ——— шапка ——— */
+.top{position:sticky; top:0; z-index:50; background:var(--paper); border-bottom:1px solid var(--line)}
+.top-in{display:flex; align-items:center; gap:24px; padding:14px 26px; max-width:1140px; margin:0 auto}
+.top img{height:44px; width:auto}
+.top-right{margin-left:auto; display:flex; align-items:center; gap:22px}
+.tel{font-family:Ubuntu,sans-serif; font-size:22px; font-weight:500; color:var(--ink); text-decoration:none; white-space:nowrap}
+.tel small{display:block; font-family:Roboto,sans-serif; font-size:12px; color:var(--ink-soft); font-weight:400; letter-spacing:.02em}
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:10px;
+  background:var(--amber); color:#fff; border:0; border-radius:8px;
+  font-family:Ubuntu,sans-serif; font-size:16px; font-weight:500; letter-spacing:.01em;
+  padding:15px 28px; cursor:pointer; text-decoration:none; white-space:nowrap;
+  transition:background .18s ease, transform .18s ease;
+}
+.btn:hover{background:var(--amber-deep)}
+.btn:active{transform:translateY(1px)}
+.btn:focus-visible{outline:3px solid var(--focus); outline-offset:2px}
+.btn.ghost{background:transparent; color:var(--teal-ink); border:1.5px solid var(--teal)}
+.btn.ghost:hover{background:var(--mist-2)}
+@media(max-width:860px){.top .tel small{display:none} .top .btn{display:none}}
+@media(max-width:560px){
+  .wrap{padding:0 18px}
+  .top-in{gap:14px; padding:12px 18px}
+  .top img{height:28px}
+  .tel{font-size:17px}
+}
+@media(max-width:400px){.top img{height:24px} .tel{font-size:16px}}
+
+/* ——— первый экран ——— */
+.hero{background:linear-gradient(152deg,var(--brand-1) 0%,var(--brand-2) 62%,var(--brand-3) 100%); padding:56px 0 108px; color:#fff}
+.hero-grid{display:grid; grid-template-columns:1fr 430px; gap:52px; align-items:center}
+.hero-eyebrow{font-family:Ubuntu,sans-serif; font-size:14px; letter-spacing:.08em;
+  color:rgba(255,255,255,.82); margin-bottom:18px}
+.hero h1{color:#fff; font-size:clamp(34px,4.8vw,58px)}
+.hero-sub{font-size:20px; line-height:1.45; color:rgba(255,255,255,.92); margin:20px 0 0; max-width:38ch}
+
+.hero-form{background:var(--paper); border-radius:16px; padding:28px;
+  box-shadow:0 26px 70px -20px rgba(0,60,68,.5); color:var(--ink)}
+.hf-head{border-bottom:1px solid var(--line); padding-bottom:18px; margin-bottom:18px}
+.hf-head h3{margin-bottom:10px}
+.hf-price{font-family:Ubuntu,sans-serif; font-size:30px; font-weight:500; color:var(--amber);
+  line-height:1; font-variant-numeric:tabular-nums}
+.hf-price span{display:block; font-family:Roboto,sans-serif; font-size:13.5px; font-weight:400;
+  color:var(--ink-soft); margin-top:8px; line-height:1.4}
+
+.hero-feats{display:grid; grid-template-columns:repeat(4,1fr); margin:46px 0 0; padding:0;
+  list-style:none; border-top:1px solid rgba(255,255,255,.18)}
+.hero-feats li{display:grid; grid-template-columns:44px 1fr; gap:14px; align-items:center;
+  padding:26px 20px 30px 0}
+.hero-feats li + li{border-left:1px solid rgba(255,255,255,.18); padding-left:22px}
+.hero-feats svg{width:44px; height:44px; padding:11px; border-radius:50%; box-sizing:border-box;
+  background:rgba(255,255,255,.14); fill:none; stroke:#fff; stroke-width:2;
+  stroke-linecap:round; stroke-linejoin:round}
+.hero-feats b{display:block; font-family:Ubuntu,sans-serif; font-size:16.5px; font-weight:500;
+  color:#fff; line-height:1.2; margin-bottom:4px}
+.hero-feats span{display:block; font-size:14px; color:rgba(255,255,255,.8); line-height:1.35}
+
+@media(max-width:920px){
+  .hero-grid{grid-template-columns:1fr; gap:32px}
+  .hero-sub{max-width:none}
+  .hero-feats{grid-template-columns:repeat(2,1fr); margin-top:38px}
+  .hero-feats li{padding:22px 18px 24px 0}
+  .hero-feats li + li{border-left:0; padding-left:0}
+  .hero-feats li:nth-child(2n){border-left:1px solid rgba(255,255,255,.18); padding-left:22px}
+  .hero-feats li:nth-child(n+3){border-top:1px solid rgba(255,255,255,.18)}
+}
+@media(max-width:560px){
+  .hero-feats{grid-template-columns:1fr}
+  .hero-feats li{padding:18px 0}
+  .hero-feats li:nth-child(2n){border-left:0; padding-left:0}
+  .hero-feats li + li{border-top:1px solid rgba(255,255,255,.18)}
+}
+@media(max-width:520px){
+  .hero{padding-top:36px}
+  .hero-form{padding:22px}
+}
+
+/* ——— три направления ——— */
+.promo-wrap{padding:0 0 60px}
+.promo{display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:-80px;
+  position:relative; z-index:2}
+.pr{border-radius:16px; padding:28px 26px 26px; color:#fff; display:flex; flex-direction:column;
+  min-height:212px; box-shadow:var(--shadow); position:relative; overflow:hidden}
+.pr.a{background:linear-gradient(146deg,#0096aa 0%,#006977 100%)}
+.pr.b{background:linear-gradient(146deg,#125a68 0%,#003c44 100%)}
+.pr.c{background:linear-gradient(146deg,#f08c07 0%,#be6f06 100%)}
+.pr .k{font-family:Ubuntu,sans-serif; font-size:12px; letter-spacing:.14em; text-transform:uppercase;
+  color:rgba(255,255,255,.78); margin-bottom:12px}
+.pr h3{color:#fff; font-size:23px; line-height:1.2}
+.pr p{font-size:14.5px; color:rgba(255,255,255,.9); margin:10px 0 0; max-width:30ch}
+.pr .go{margin-top:auto; padding-top:18px; font-size:14.5px; color:#fff; text-decoration:none;
+  border-bottom:1px solid rgba(255,255,255,.45); align-self:flex-start; line-height:1.7}
+.pr .go:hover{border-bottom-color:#fff}
+.pr .mark{position:absolute; right:-18px; bottom:-24px; width:130px; height:130px; opacity:.14;
+  fill:none; stroke:#fff; stroke-width:1.4}
+@media(max-width:900px){.promo{grid-template-columns:1fr; margin-top:-60px}
+  .hero{padding-bottom:88px}}
+
+/* ——— nobel ——— */
+.nobel{display:grid; grid-template-columns:440px 1fr; gap:46px; align-items:center}
+.nobel img{border-radius:10px; box-shadow:var(--shadow); width:100%}
+.badges{display:flex; flex-direction:column; gap:14px; margin-top:22px; padding:0; list-style:none}
+.badges li{display:grid; grid-template-columns:26px 1fr; gap:14px; align-items:start; font-size:16.5px}
+.badges svg{width:26px; height:26px; margin-top:2px; fill:none; stroke:var(--teal); stroke-width:2; stroke-linecap:round; stroke-linejoin:round}
+.badges b{font-weight:500}
+@media(max-width:800px){.nobel{grid-template-columns:1fr; gap:26px} .nobel img{max-width:440px}}
+
+/* ——— решения и цены ——— */
+.plans{display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:30px}
+.plan{background:var(--paper); border:1px solid var(--line); border-radius:14px; padding:28px 26px 26px;
+  display:flex; flex-direction:column; gap:14px}
+.plan.lead{border-color:var(--teal); box-shadow:var(--shadow); position:relative}
+.plan.lead::before{content:"Чаще всего выбирают"; position:absolute; top:-11px; left:26px;
+  background:var(--teal-ink); color:var(--on-accent); font-size:12px; letter-spacing:.06em; text-transform:uppercase;
+  padding:4px 12px; border-radius:999px; font-family:Ubuntu,sans-serif}
+.plan .who{font-size:14.5px; color:var(--ink-soft); min-height:42px}
+.plan .price{font-family:Ubuntu,sans-serif; font-size:32px; font-weight:500; color:var(--ink);
+  font-variant-numeric:tabular-nums; letter-spacing:-.01em}
+.plan .price small{display:block; font-family:Roboto,sans-serif; font-size:13.5px; color:var(--ink-soft); font-weight:400; margin-top:3px}
+.plan ul{margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:9px; font-size:15px}
+.plan li{display:grid; grid-template-columns:18px 1fr; gap:10px; align-items:start; color:var(--ink-soft)}
+.plan li svg{width:18px; height:18px; margin-top:3px; fill:none; stroke:var(--teal); stroke-width:2.4; stroke-linecap:round; stroke-linejoin:round}
+.plan .btn{margin-top:auto}
+@media(max-width:860px){.plans{grid-template-columns:1fr}}
+
+/* ——— системы имплантов ——— */
+.systems{display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:26px}
+.sys{border:1px solid var(--line); border-radius:12px; padding:18px 18px 20px; background:var(--paper);
+  display:flex; flex-direction:column; gap:12px}
+.sys .plate{background:#fff; border:1px solid var(--line); border-radius:9px; height:74px;
+  display:flex; align-items:center; justify-content:center; padding:12px 16px}
+.sys .plate img{max-height:100%; max-width:100%; width:auto; object-fit:contain}
+.sys .geo{align-self:flex-start; font-family:Ubuntu,sans-serif; font-size:12px; letter-spacing:.07em;
+  text-transform:uppercase; color:var(--teal-ink); background:var(--mist-2); border-radius:999px; padding:4px 11px}
+.sys span.txt{font-size:14.5px; color:var(--ink-soft)}
+.sys-note{margin-top:18px; background:var(--paper); border:1px solid var(--line); border-radius:12px;
+  padding:20px 24px; display:grid; grid-template-columns:26px 1fr; gap:16px; align-items:start;
+  font-size:15.5px; color:var(--ink-soft); max-width:none}
+.sys-note svg{width:26px; height:26px; margin-top:2px; fill:none; stroke:var(--teal); stroke-width:2;
+  stroke-linecap:round; stroke-linejoin:round}
+.sys-note b{color:var(--ink); font-weight:500}
+@media(max-width:860px){.systems{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.systems{grid-template-columns:1fr}}
+
+/* ——— преимущества ——— */
+.feats{display:grid; grid-template-columns:repeat(3,1fr); gap:30px 34px; margin-top:26px}
+.feat{display:grid; grid-template-columns:52px 1fr; gap:16px; align-items:start}
+.ic{width:52px; height:52px; border-radius:50%; background:var(--mist-2);
+  display:flex; align-items:center; justify-content:center}
+.ic svg{width:26px; height:26px; fill:none; stroke:var(--teal-deep); stroke-width:2; stroke-linecap:round; stroke-linejoin:round}
+.feat p{font-size:15px; color:var(--ink-soft); margin:6px 0 0}
+@media(max-width:900px){.feats{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.feats{grid-template-columns:1fr}}
+
+/* ——— этапы ——— */
+.steps{display:flex; flex-direction:column; margin-top:28px; border-top:1px solid var(--line)}
+.step{display:grid; grid-template-columns:64px 1fr 190px; gap:26px; align-items:baseline;
+  padding:24px 0; border-bottom:1px solid var(--line)}
+.step .n{font-family:Ubuntu,sans-serif; font-size:26px; font-weight:500; color:var(--teal-ink); font-variant-numeric:tabular-nums}
+.step p{font-size:15.5px; color:var(--ink-soft); margin:6px 0 0}
+.step .when{font-size:14.5px; color:var(--ink); background:var(--mist-2); border-radius:7px;
+  padding:7px 13px; justify-self:start; white-space:nowrap}
+@media(max-width:800px){
+  .step{grid-template-columns:44px 1fr; gap:16px}
+  .step .when{grid-column:2; justify-self:start; margin-top:10px}
+}
+
+/* ——— до и после ——— */
+.cases{display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-top:28px}
+.case{border:1px solid var(--line); border-radius:12px; overflow:hidden; background:var(--paper)}
+.pair{display:grid; grid-template-columns:1fr 1fr}
+.pair figure{margin:0; position:relative}
+.pair img{width:100%; height:auto}
+.pair figcaption{position:absolute; left:8px; top:8px; background:rgba(0,60,68,.82); color:#fff;
+  font-size:11.5px; letter-spacing:.08em; text-transform:uppercase; padding:3px 9px; border-radius:5px}
+.case .txt{padding:16px 18px; font-size:15px; color:var(--ink-soft)}
+@media(max-width:860px){.cases{grid-template-columns:1fr}}
+
+/* ——— врачи ——— */
+.team-lead{font-size:17.5px; max-width:78ch}
+.team-group{margin-top:36px}
+.tg-head{display:flex; align-items:baseline; gap:14px; flex-wrap:wrap;
+  border-bottom:2px solid var(--line); padding-bottom:12px; margin-bottom:22px}
+.tg-head b{font-family:Ubuntu,sans-serif; font-size:22px; font-weight:500; color:var(--ink)}
+.tg-head span{font-size:15px; color:var(--ink-soft)}
+.team{display:grid; grid-template-columns:repeat(3,1fr); gap:20px}
+.doc{background:var(--paper); border:1px solid var(--line); border-radius:14px; overflow:hidden;
+  display:flex; flex-direction:column; transition:box-shadow .2s ease, transform .2s ease}
+.doc:hover{box-shadow:var(--shadow); transform:translateY(-2px)}
+.doc .ph{background:var(--mist-2)}
+.doc .ph img{width:100%; aspect-ratio:4/3; object-fit:cover; object-position:center 12%}
+.doc .db{padding:18px 20px 20px; display:flex; flex-direction:column; gap:7px; flex:1}
+.doc h3{font-size:18px}
+.doc .role{font-size:14.5px; color:var(--teal-ink)}
+.doc .meta{margin-top:auto; padding-top:12px; border-top:1px solid var(--line);
+  display:flex; justify-content:space-between; gap:10px; font-size:13.5px; color:var(--ink-soft)}
+.doc .rc{display:inline-flex; align-items:center; gap:6px; white-space:nowrap}
+.doc .rc svg{width:14px; height:14px; fill:var(--amber); stroke:none}
+/* два ведущих хирурга — крупная горизонтальная карточка */
+.team.pair{grid-template-columns:repeat(2,1fr)}
+.team.pair .doc{flex-direction:row}
+.team.pair .doc .ph{flex:0 0 200px}
+.team.pair .doc .ph img{aspect-ratio:3/4; height:100%; object-position:center 10%}
+.team.pair .doc .db{padding:22px 24px; justify-content:center; gap:9px}
+.team.pair .doc .meta{margin-top:14px}
+.team.pair .doc h3{font-size:19px}
+@media(max-width:900px){.team.pair{grid-template-columns:1fr}}
+@media(max-width:430px){.team.pair .doc{flex-direction:column} .team.pair .doc .ph{flex:none}
+  .team.pair .doc .ph img{aspect-ratio:4/3; height:auto; object-position:center 12%}}
+
+/* раскрывашка с остальными */
+details.more{border-bottom:0; margin-top:20px}
+details.more > summary{position:static; cursor:pointer; list-style:none;
+  display:inline-flex; align-items:center; gap:12px; padding:13px 22px;
+  font-family:Ubuntu,sans-serif; font-size:16px; font-weight:500; color:var(--teal-ink);
+  border:1.5px solid var(--teal); border-radius:8px}
+details.more > summary:hover{background:var(--mist-2)}
+details.more > summary::-webkit-details-marker{display:none}
+details.more > summary::after{content:""; position:static; top:auto; right:auto;
+  width:9px; height:9px; border-right:2px solid currentColor; border-bottom:2px solid currentColor;
+  transform:rotate(45deg) translate(-3px,-3px); transition:transform .2s ease}
+details.more[open] > summary::after{transform:rotate(-135deg) translate(-2px,-2px)}
+details.more[open] > summary{margin-bottom:22px}
+
+@media(max-width:900px){.team{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.team{grid-template-columns:1fr}}
+
+/* ——— отзывы ——— */
+.rev-sub{font-size:17px; color:var(--ink-soft); max-width:70ch; margin-bottom:34px}
+.rev{position:relative}
+.rev-view{overflow:hidden}
+.rev-track{display:flex; transition:transform .45s cubic-bezier(.4,.05,.2,1)}
+.rev-slide{flex:0 0 100%; display:grid; grid-template-columns:360px 1fr; align-items:center; min-height:440px}
+.rs-photo{grid-column:1; grid-row:1; z-index:2; align-self:end; margin-bottom:-18px}
+.rs-photo img{width:100%; height:auto; display:block}
+.rs-body{grid-column:1 / -1; grid-row:1; margin-left:250px; padding:46px 54px 46px 150px;
+  background:var(--mist-2); border-radius:170px 90px 190px 100px / 110px 180px 90px 160px}
+.rs-top{display:flex; align-items:flex-start; justify-content:space-between; gap:24px; margin-bottom:22px}
+.rs-src .pd-logo{height:22px; width:auto; margin-bottom:6px}
+.rs-src span{display:block; font-size:14px; color:var(--ink-soft)}
+.rs-badge{background:var(--paper); border:1px solid var(--line); border-radius:12px;
+  padding:10px 16px; text-align:center; white-space:nowrap}
+.rs-rate{display:flex; align-items:center; justify-content:center; gap:10px}
+.rs-rate b{font-family:Ubuntu,sans-serif; font-size:22px; font-weight:500; color:var(--ink);
+  line-height:1; font-variant-numeric:tabular-nums}
+.stars{position:relative; display:inline-block; line-height:0}
+.st-base,.st-fill{display:flex; gap:2px}
+.st-fill{position:absolute; left:0; top:0; overflow:hidden}
+.stars svg{width:15px; height:15px; flex:none; stroke:none}
+.st-base svg{fill:var(--line)}
+.st-fill svg{fill:var(--amber)}
+.rs-cap{display:block; font-size:12px; color:var(--ink-soft); margin-top:6px}
+.rs-body h3{font-size:23px; margin-bottom:5px}
+.rs-role{font-size:15.5px; color:var(--teal-ink); margin-bottom:18px}
+.rs-body blockquote{margin:0; font-size:17px; line-height:1.55; color:var(--ink); max-width:62ch}
+.rs-meta{font-size:14px; color:var(--ink-soft); margin-top:16px}
+.rs-link{display:inline-flex; align-items:center; gap:10px; margin-top:20px;
+  font-family:Ubuntu,sans-serif; font-size:16px; font-weight:500; color:var(--teal-ink); text-decoration:none}
+.rs-link::after{content:"→"; font-size:21px; line-height:1; transition:transform .2s ease}
+.rs-link:hover::after{transform:translateX(5px)}
+
+.rev-nav{display:flex; align-items:center; justify-content:flex-end; gap:18px; margin-top:6px}
+.rev-btn{width:42px; height:42px; border-radius:50%; border:1.5px solid var(--line); background:var(--paper);
+  cursor:pointer; position:relative; transition:border-color .2s ease, background .2s ease}
+.rev-btn:hover{border-color:var(--teal); background:var(--mist)}
+.rev-btn:focus-visible{outline:3px solid var(--focus); outline-offset:2px}
+.rev-btn::before{content:""; position:absolute; top:50%; left:52%; width:9px; height:9px;
+  border-left:2px solid var(--teal-ink); border-bottom:2px solid var(--teal-ink);
+  transform:translate(-50%,-50%) rotate(45deg)}
+.rev-btn.next::before{left:48%; transform:translate(-50%,-50%) rotate(-135deg)}
+.rev-count{font-family:Ubuntu,sans-serif; font-size:22px; font-weight:500; color:var(--ink-soft);
+  font-variant-numeric:tabular-nums}
+.rev-count b{color:var(--teal-ink); font-weight:500}
+
+@media(max-width:1000px){
+  .rev-slide{grid-template-columns:280px 1fr; min-height:0}
+  .rs-body{margin-left:190px; padding:38px 38px 38px 120px; border-radius:110px 60px 130px 70px / 80px 120px 60px 110px}
+}
+@media(max-width:780px){
+  .rev-slide{grid-template-columns:1fr; min-height:0}
+  .rs-photo{grid-row:1; max-width:260px; margin:0 auto; align-self:center}
+  .rs-body{grid-row:2; margin-left:0; margin-top:-40px; padding:60px 26px 32px;
+    border-radius:26px}
+  .rs-top{flex-direction:column; gap:14px}
+  .rs-badge{align-self:flex-start}
+  .rev-nav{justify-content:center; margin-top:18px}
+}
+
+/* ——— вопросы ——— */
+.faq{margin-top:26px; border-top:1px solid var(--line)}
+details{border-bottom:1px solid var(--line)}
+summary{cursor:pointer; list-style:none; padding:20px 44px 20px 0; position:relative;
+  font-family:Ubuntu,sans-serif; font-size:18px; font-weight:500; color:var(--ink)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:""; position:absolute; right:10px; top:26px; width:11px; height:11px;
+  border-right:2px solid var(--teal); border-bottom:2px solid var(--teal);
+  transform:rotate(45deg); transition:transform .2s ease}
+details[open] summary::after{transform:rotate(-135deg)}
+summary:focus-visible{outline:2px solid var(--focus); outline-offset:3px; border-radius:4px}
+details p{padding:0 0 20px; font-size:16px; color:var(--ink-soft)}
+
+/* ——— форма ——— */
+.book{background:linear-gradient(150deg,var(--brand-1) 0%,var(--brand-2) 100%); color:#fff}
+.book h2{color:#fff}
+.book-grid{display:grid; grid-template-columns:1fr 420px; gap:48px; align-items:center}
+.book p{color:rgba(255,255,255,.92)}
+.book .list{display:flex; flex-direction:column; gap:12px; margin:22px 0 0; padding:0; list-style:none}
+.book .list li{display:grid; grid-template-columns:22px 1fr; gap:12px; font-size:16.5px; color:rgba(255,255,255,.95)}
+.book .list svg{width:22px; height:22px; margin-top:3px; fill:none; stroke:#fff; stroke-width:2.2; stroke-linecap:round; stroke-linejoin:round}
+.form{background:var(--paper); border-radius:16px; padding:30px; box-shadow:0 22px 60px -18px rgba(0,60,68,.5)}
+.form h3{margin-bottom:6px; color:var(--ink)}
+.form .hint{font-size:14px; color:var(--ink-soft); margin-bottom:18px}
+.field{display:flex; flex-direction:column; gap:6px; margin-bottom:14px}
+.field label{font-size:13.5px; color:var(--ink-soft)}
+.field input{
+  font-family:Roboto,sans-serif; font-size:16px; color:var(--ink); background:var(--paper);
+  border:1.5px solid var(--line); border-radius:8px; padding:13px 14px; width:100%;
+}
+.field input:focus{outline:none; border-color:var(--teal)}
+.form .btn{width:100%; margin-top:4px}
+.consent{font-size:12.5px; color:var(--ink-soft); margin-top:12px; line-height:1.45}
+@media(max-width:900px){.book-grid{grid-template-columns:1fr; gap:30px}}
+
+/* ——— подвал ——— */
+.foot{background:var(--mist); border-top:1px solid var(--line); padding:44px 0 36px; font-size:15px; color:var(--ink-soft)}
+.foot-grid{display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:32px}
+.foot img{height:46px; width:auto; margin-bottom:14px}
+.foot b{display:block; font-family:Ubuntu,sans-serif; font-size:16px; color:var(--ink); font-weight:500; margin-bottom:8px}
+.foot a{color:var(--ink); text-decoration:none}
+.foot a:hover{color:var(--teal-ink)}
+.legal{margin-top:28px; padding-top:20px; border-top:1px solid var(--line); font-size:13px; line-height:1.5}
+@media(max-width:760px){.foot-grid{grid-template-columns:1fr; gap:24px}}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important; transition:none!important}}
+</style>
+
+<svg style="display:none">
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M4.5 12.5l5 5 10-11"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2.6 4.6 5.4v6c0 4.7 3.1 8.5 7.4 10 4.3-1.5 7.4-5.3 7.4-10v-6z"/><path d="M9 12.2l2.1 2.1 4.3-4.6"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.2"/><path d="M12 6.6V12l3.6 2.2"/></symbol>
+  <symbol id="i-lab" viewBox="0 0 24 24"><path d="M9.5 3v6.2L4.6 18a2 2 0 0 0 1.7 3h11.4a2 2 0 0 0 1.7-3l-4.9-8.8V3"/><path d="M8.6 3h6.8M7.6 14.5h8.8"/></symbol>
+  <symbol id="i-scan" viewBox="0 0 24 24"><path d="M3.5 8.5v-3a2 2 0 0 1 2-2h3M15.5 3.5h3a2 2 0 0 1 2 2v3M20.5 15.5v3a2 2 0 0 1-2 2h-3M8.5 20.5h-3a2 2 0 0 1-2-2v-3"/><path d="M3.5 12h17"/></symbol>
+  <symbol id="i-sleep" viewBox="0 0 24 24"><path d="M20.5 14.4A8.5 8.5 0 0 1 9.6 3.5a8.5 8.5 0 1 0 10.9 10.9z"/></symbol>
+  <symbol id="i-bone" viewBox="0 0 24 24"><path d="M6.5 10.5a2.8 2.8 0 1 1 2-4.8 2.8 2.8 0 1 1 4.3 3.4l4.5 4.5a2.8 2.8 0 1 1 .3 4.2 2.8 2.8 0 1 1-4.2-.3l-4.5-4.5a2.8 2.8 0 0 1-2.4-2.5z"/></symbol>
+  <symbol id="i-tooth" viewBox="0 0 24 24"><path d="M12 3.4c-2 0-2.6 1-4.5 1C5.3 4.4 3.6 5.7 3.6 8.6c0 3.3 1.4 4.5 2.2 8 .5 2.3.9 3.9 2.2 3.9 1.6 0 1.8-2.1 2.2-4.3.3-1.5.6-2.5 1.8-2.5s1.5 1 1.8 2.5c.4 2.2.6 4.3 2.2 4.3 1.3 0 1.7-1.6 2.2-3.9.8-3.5 2.2-4.7 2.2-8 0-2.9-1.7-4.2-3.9-4.2-1.9 0-2.5-1-4.5-1z"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5-5.9-3.1-5.9 3.1 1.2-6.5L2.5 9.5l6.6-.9z"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 3.5H7a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8.5z"/><path d="M14 3.5v5h5M8.5 13h7M8.5 16.5h4.5"/></symbol>
+</svg>
+
+<header class="top">
+  <div class="top-in">
+    <img src="[EMBEDDED]" alt="Подмосковье — центр имплантации">
+    <div class="top-right">
+      <a class="tel" href="tel:+74852744545">+7 (4852) 74-45-45<small>Ежедневно, Пн–Сб с 8:00</small></a>
+      <a class="btn" href="#zapis">Записаться</a>
+    </div>
+  </div>
+</header>
+
+<!-- ——— первый экран ——— -->
+<div class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <div class="hero-eyebrow">Центр имплантации в Ярославле · работаем с 1998 года</div>
+        <h1>Верните зубы<br>за одно посещение</h1>
+        <p class="hero-sub">От одного импланта до всей челюсти по протоколу All-on-4.
+          Авторизованный центр Nobel Biocare, приживаемость 99 %.</p>
+      </div>
+
+      <form class="hero-form" onsubmit="event.preventDefault(); this.querySelector(String.fromCharCode(46)+String.fromCharCode(98,116,110)).textContent=String.fromCharCode(1047)+String.fromCharCode(1072,1103,1074,1082,1072)+String.fromCharCode(32)+String.fromCharCode(1086,1090,1087,1088,1072,1074,1083,1077,1085,1072);">
+        <div class="hf-head">
+          <h3>Консультация с диагностикой</h3>
+          <div class="hf-price">1 800 ₽<span>осмотр хирурга и ортопеда, разбор снимка, план и смета лечения</span></div>
+        </div>
+        <div class="field">
+          <label for="nm0">Как к вам обращаться</label>
+          <input id="nm0" name="name" type="text" placeholder="Имя" required>
+        </div>
+        <div class="field">
+          <label for="ph0">Телефон для связи</label>
+          <input id="ph0" name="phone" type="tel" placeholder="+7 (___) ___-__-__" required>
+        </div>
+        <button class="btn" type="submit">Записаться на приём</button>
+        <p class="consent">Перезвоним в рабочее время и подберём удобный день.
+          Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
+      </form>
+    </div>
+
+    <ul class="hero-feats">
+      <li><svg><use href="#i-clock"/></svg><span><b>Временный протез</b>в день операции</span></li>
+      <li><svg><use href="#i-shield"/></svg><span><b>Пожизненная гарантия</b>на импланты Nobel</span></li>
+      <li><svg><use href="#i-lab"/></svg><span><b>Своя лаборатория</b>протез без пересылок</span></li>
+      <li><svg><use href="#i-tooth"/></svg><span><b>50 000+ имплантов</b>за 27 лет работы</span></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ——— три направления ——— -->
+<section class="promo-wrap">
+  <div class="wrap">
+    <div class="promo">
+      <div class="pr a">
+        <svg class="mark"><use href="#i-tooth"/></svg>
+        <div class="k">All-on-4</div>
+        <h3>Вся челюсть<br>за одно посещение</h3>
+        <p>Четыре импланта и временный несъёмный протез в день операции.</p>
+        <a class="go" href="#tseny">Как это устроено →</a>
+      </div>
+      <div class="pr b">
+        <svg class="mark"><use href="#i-shield"/></svg>
+        <div class="k">Nobel Biocare</div>
+        <h3>Швейцарские импланты<br>с пожизненной гарантией</h3>
+        <p>Клиника подтверждает статус Center of Excellence по протоколу All-on-4.</p>
+        <a class="go" href="#nobel">О статусе центра →</a>
+      </div>
+      <div class="pr c">
+        <svg class="mark"><use href="#i-sleep"/></svg>
+        <div class="k">Седация</div>
+        <h3>Лечение во сне<br>с анестезиологом</h3>
+        <p>Для длинных операций и для тех, кто боится стоматолога.</p>
+        <a class="go" href="#zapis">Записаться →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ——— nobel ——— -->
+<section class="tint" id="nobel">
+  <div class="wrap nobel">
+    <img src="[EMBEDDED]" alt="Сертификат «Центр клинического мастерства» Nobel Biocare — медицинский центр «Подмосковье»">
+    <div>
+      <h2>Центр клинического мастерства Nobel Biocare</h2>
+      <p>Статус означает, что лечение идёт на решениях Nobel Biocare и по международным стандартам производителя.</p>
+      <ul class="badges">
+        <li><svg><use href="#i-check"/></svg><span><b>Гарантия качества</b> — работаем с лидером индустрии и даём пожизненную гарантию на импланты</span></li>
+        <li><svg><use href="#i-check"/></svg><span><b>Авторизованный центр All-on-4®</b> — входим в 10 лучших клиник ЦФО со статусом Center of Excellence</span></li>
+        <li><svg><use href="#i-check"/></svg><span><b>Признание производителя</b> — на сегодняшний день наша клиника единственная в Ярославской области, кто удостоен такого признания от Nobel Biocare</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ——— решения и цены ——— -->
+<section id="tseny">
+  <div class="wrap">
+    <h2>Сколько зубов нужно восстановить</h2>
+    <p>Точная стоимость известна после диагностики: она зависит от объёма кости, системы имплантов и типа коронки. Здесь — от чего считать.</p>
+
+    <div class="plans">
+      <div class="plan">
+        <h3>Один зуб</h3>
+        <div class="who">Потерян или удалён отдельный зуб, соседние здоровы</div>
+        <div class="price">от 78 500 ₽<small>имплант, абатмент и коронка</small></div>
+        <ul>
+          <li><svg><use href="#i-check"/></svg>Не нужно обтачивать соседние зубы</li>
+          <li><svg><use href="#i-check"/></svg>Срок службы дольше, чем у моста</li>
+          <li><svg><use href="#i-check"/></svg>3D-планирование положения</li>
+        </ul>
+        <a class="btn ghost" href="#zapis">Рассчитать</a>
+      </div>
+
+      <div class="plan">
+        <h3>Несколько зубов</h3>
+        <div class="who">Отсутствует группа зубов подряд или в разных отделах</div>
+        <div class="price">от 73 000 ₽<small>за единицу при восстановлении нескольких</small></div>
+        <ul>
+          <li><svg><use href="#i-check"/></svg>Мост на имплантах вместо съёмного протеза</li>
+          <li><svg><use href="#i-check"/></svg>Жевательная нагрузка распределяется</li>
+          <li><svg><use href="#i-check"/></svg>Кость не убывает под протезом</li>
+        </ul>
+        <a class="btn ghost" href="#zapis">Рассчитать</a>
+      </div>
+
+      <div class="plan lead">
+        <h3>Вся челюсть — All-on-4</h3>
+        <div class="who">Зубов нет или почти нет, съёмный протез не держится</div>
+        <div class="price">от 441 000 ₽<small>челюсть под ключ с протезом</small></div>
+        <ul>
+          <li><svg><use href="#i-check"/></svg>Временный протез в день операции</li>
+          <li><svg><use href="#i-check"/></svg>Часто без костной пластики</li>
+          <li><svg><use href="#i-check"/></svg>Несъёмная конструкция — не вынимается</li>
+        </ul>
+        <a class="btn" href="#zapis">Записаться</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ——— системы ——— -->
+<section class="tint">
+  <div class="wrap">
+    <h2>Решаем любой клинический случай</h2>
+    <p>Четыре системы имплантов — от одного зуба до полной челюсти. Подходящую подбирает врач: по объёму кости, прикусу и бюджету.</p>
+    <div class="systems">
+      <div class="sys">
+        <div class="plate"><img src="[EMBEDDED]" alt="Nobel Biocare"></div>
+        <span class="geo">Швейцария</span>
+        <span class="txt">Премиум-имплантаты одного из ведущих производителей в мире</span>
+      </div>
+      <div class="sys">
+        <div class="plate"><img src="[EMBEDDED]" alt="Neodent"></div>
+        <span class="geo">Бразилия</span>
+        <span class="txt">Отличная альтернатива дорогим европейским системам</span>
+      </div>
+      <div class="sys">
+        <div class="plate"><img src="[EMBEDDED]" alt="INNO"></div>
+        <span class="geo">Южная Корея</span>
+        <span class="txt">Качественные импланты по приемлемой цене от компании CowellMedi</span>
+      </div>
+      <div class="sys">
+        <div class="plate"><img src="[EMBEDDED]" alt="AlphaBio Tec"></div>
+        <span class="geo">Израиль</span>
+        <span class="txt">Один из доступных брендов в сфере имплантации зубов</span>
+      </div>
+    </div>
+    <p class="sys-note"><svg><use href="#i-doc"/></svg><span><b>Какая система подойдёт вам — известно после первой же консультации.</b> Системы отличаются ценой и особенностями установки, поэтому врач назначает лечение индивидуально и разбирает каждый вариант на приёме.</span></p>
+  </div>
+  </div>
+</section>
+
+<!-- ——— преимущества ——— -->
+<section>
+  <div class="wrap">
+    <h2>Что входит в работу центра</h2>
+    <div class="feats">
+      <div class="feat">
+        <div class="ic"><svg><use href="#i-scan"/></svg></div>
+        <div><h3>3D-томография</h3><p>Собственный томограф. Оцениваем объём кости и положение нервов до операции.</p></div>
+      </div>
+      <div class="feat">
+        <div class="ic"><svg><use href="#i-doc"/></svg></div>
+        <div><h3>Навигационный шаблон</h3><p>Имплант устанавливается точно по плану, а не «на глаз» — меньше травма и срок заживления.</p></div>
+      </div>
+      <div class="feat">
+        <div class="ic"><svg><use href="#i-sleep"/></svg></div>
+        <div><h3>Лечение во сне</h3><p>Седация и наркоз с анестезиологом — для длинных операций и при страхе лечения.</p></div>
+      </div>
+      <div class="feat">
+        <div class="ic"><svg><use href="#i-bone"/></svg></div>
+        <div><h3>Сложные случаи</h3><p>Костная пластика и синус-лифтинг, когда объёма кости не хватает для импланта.</p></div>
+      </div>
+      <div class="feat">
+        <div class="ic"><svg><use href="#i-shield"/></svg></div>
+        <div><h3>Гарантия и наблюдение</h3><p>Пожизненная гарантия производителя на импланты, профосмотры раз в 6–12 месяцев.</p></div>
+      </div>
+      <div class="feat">
+        <div class="ic"><svg><use href="#i-lab"/></svg></div>
+        <div><h3>Своя лаборатория</h3><p>Зубной техник работает в клинике. Сроки короче, правки — без пересылок и доплат.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ——— этапы ——— -->
+<section class="tint">
+  <div class="wrap">
+    <h2>Шесть этапов от осмотра до коронки</h2>
+    <div class="steps">
+      <div class="step">
+        <span class="n">1</span>
+        <div><h3>Консультация и диагностика</h3><p>Осмотр хирурга и ортопеда, компьютерная томография, анализ снимка. На выходе — план лечения и точная смета.</p></div>
+        <span class="when">1 приём, 1 800 ₽</span>
+      </div>
+      <div class="step">
+        <span class="n">2</span>
+        <div><h3>3D-планирование</h3><p>Положение каждого импланта рассчитывается в программе, изготавливается навигационный шаблон.</p></div>
+        <span class="when">до операции</span>
+      </div>
+      <div class="step">
+        <span class="n">3</span>
+        <div><h3>Подготовка</h3><p>Санация полости рта, при нехватке объёма — костная пластика или синус-лифтинг.</p></div>
+        <span class="when">по необходимости</span>
+      </div>
+      <div class="step">
+        <span class="n">4</span>
+        <div><h3>Установка имплантов</h3><p>Операция по шаблону. При All-on-4 — под седацией, в тот же день ставится временный протез.</p></div>
+        <span class="when">3–6 часов</span>
+      </div>
+      <div class="step">
+        <span class="n">5</span>
+        <div><h3>Приживление</h3><p>Имплант срастается с костью. Всё это время вы ходите с временной конструкцией и жуёте.</p></div>
+        <span class="when">3–6 месяцев</span>
+      </div>
+      <div class="step">
+        <span class="n">6</span>
+        <div><h3>Постоянный протез</h3><p>Изготовление в своей лаборатории, примерка, фиксация. Дальше — осмотры дважды в год.</p></div>
+        <span class="when">2–4 визита</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ——— до и после ——— -->
+<section>
+  <div class="wrap">
+    <h2>До и после</h2>
+    <div class="cases">
+      <div class="case">
+        <div class="pair">
+          <figure><img src="[EMBEDDED]" alt="До лечения"><figcaption>До</figcaption></figure>
+          <figure><img src="[EMBEDDED]" alt="После лечения"><figcaption>После</figcaption></figure>
+        </div>
+        <div class="txt">Восстановление жевательной группы имплантами с коронками из диоксида циркония</div>
+      </div>
+      <div class="case">
+        <div class="pair">
+          <figure><img src="[EMBEDDED]" alt="До лечения"><figcaption>До</figcaption></figure>
+          <figure><img src="[EMBEDDED]" alt="После лечения"><figcaption>После</figcaption></figure>
+        </div>
+        <div class="txt">Полное восстановление верхней челюсти несъёмным протезом на имплантах</div>
+      </div>
+      <div class="case">
+        <div class="pair">
+          <figure><img src="[EMBEDDED]" alt="До лечения"><figcaption>До</figcaption></figure>
+          <figure><img src="[EMBEDDED]" alt="После лечения"><figcaption>После</figcaption></figure>
+        </div>
+        <div class="txt">Замена съёмного протеза на несъёмную конструкцию по протоколу All-on-4</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ——— врачи ——— -->
+<section class="tint" id="vrachi">
+  <div class="wrap">
+    <h2>Оперируют челюстно-лицевые хирурги, протезируют ортопеды</h2>
+    <p class="team-lead">В центре нет универсалов. Имплант ставит хирург отделения челюстно-лицевой хирургии,
+      протез делает ортопед. На консультации вас смотрят оба и согласуют план до начала лечения.</p>
+
+    <div class="team-group">
+      <div class="tg-head"><b>Хирурги</b><span>Ставят импланты, делают костную пластику и синус-лифтинг</span></div>
+      <div class="team pair">
+        <article class="doc">
+          <div class="ph"><img src="[EMBEDDED]" alt="Геворкян Арарат Гарегинович"></div>
+          <div class="db">
+            <h3>Геворкян Арарат Гарегинович</h3>
+            <div class="role">Хирург-имплантолог, челюстно-лицевой хирург</div>
+            <div class="meta"><span>В профессии с 2013 года</span><span class="rc"><svg><use href="#i-star"/></svg>20 отзывов</span></div>
+          </div>
+        </article>
+        <article class="doc">
+          <div class="ph"><img src="[EMBEDDED]" alt="Тайхузин Глеб Сергеевич"></div>
+          <div class="db">
+            <h3>Тайхузин Глеб Сергеевич</h3>
+            <div class="role">Стоматолог-хирург, имплантолог</div>
+            <div class="meta"><span>В профессии с 2017 года</span><span class="rc"><svg><use href="#i-star"/></svg>7 отзывов</span></div>
+          </div>
+        </article>
+      </div>
+
+      <details class="more">
+        <summary>Показать ещё троих хирургов</summary>
+        <div class="team">
+        <article class="doc">
+          <div class="ph"><img src="[EMBEDDED]" alt="Мухлаев Алексей Федорович"></div>
+          <div class="db">
+            <h3>Мухлаев Алексей Федорович</h3>
+            <div class="role">Хирург-стоматолог, имплантолог</div>
+            <div class="meta"><span>В профессии с 2015 года</span><span class="rc"><svg><use href="#i-star"/></svg>16 отзывов</span></div>
+          </div>
+        </article>
+        <article class="doc">
+          <div class="ph"><img src="[EMBEDDED]" alt="Махмудов Павел Игоревич"></div>
+          <div class="db">
+            <h3>Махмудов Павел Игоревич</h3>
+            <div class="role">Хирург</div>
+            <div class="meta"><span>В профессии с 2018 года</span><span class="rc"><svg><use href="#i-star"/></svg>3 отзыва</span></div>
+          </div>
+        </article>
+        <article class="doc">
+          <div class="ph"><img src="[EMBEDDED]" alt="Фейнингер Екатерина Александровна"></div>
+          <div class="db">
+            <h3>Фейнингер Екатерина Александровна</h3>
+            <div class="role">Хирург-стоматолог</div>
+            <div class="meta"><span>В профессии с 2021 года</span><span class="rc"><svg><use href="#i-star"/></svg>5 отзывов</span></div>
+          </div>
+        </article>
+        </div>
+      </details>
+    </div>
+
+    <div class="team-group">
+      <div class="tg-head"><b>Ортопеды</b><span>Планируют конструкцию, изготавливают и фиксируют протез</span></div>
+      <div class="team pair">
+        <article class="doc">
+          <div class="ph"><img src="[EMBEDDED]" alt="Матвеев Дмитрий Юрьевич"></div>
+          <div class="db">
+            <h3>Матвеев Дмитрий Юрьевич</h3>
+            <div class="role">Стоматолог-ортопед</div>
+            <div class="meta"><span>В профессии с 2009 года</span></div>
+          </div>
+        </article>
+        <article class="doc">
+          <div class="ph"><img src="[EMBEDDED]" alt="Десяткин Илья Михайлович"></div>
+          <div class="db">
+            <h3>Десяткин Илья Михайлович</h3>
+            <div class="role">Стоматолог-ортопед</div>
+            <div class="meta"><span>В профессии с 2012 года</span><span class="rc"><svg><use href="#i-star"/></svg>58 отзывов</span></div>
+          </div>
+        </article>
+      </div>
+
+      <details class="more">
+        <summary>Показать ещё четверых ортопедов</summary>
+        <div class="team">
+        <article class="doc">
+          <div class="ph"><img src="[EMBEDDED]" alt="Саврасов Сергей Владимирович"></div>
+          <div class="db">
+            <h3>Саврасов Сергей Владимирович</h3>
+            <div class="role">Стоматолог-ортопед</div>
+            <div class="meta"><span>В профессии с 2005 года</span><span class="rc"><svg><use href="#i-star"/></svg>26 отзывов</span></div>
+          </div>
+        </article>
+        <article class="doc">
+          <div class="ph"><img src="[EMBEDDED]" alt="Арифулина Екатерина Сергеевна"></div>
+          <div class="db">
+            <h3>Арифулина Екатерина Сергеевна</h3>
+            <div class="role">Заместитель директора по медицинской части</div>
+            <div class="meta"><span>В профессии с 2006 года</span><span class="rc"><svg><use href="#i-star"/></svg>31 отзыв</span></div>
+          </div>
+        </article>
+        <article class="doc">
+          <div class="ph"><img src="[EMBEDDED]" alt="Гаврилов Александр Дмитриевич"></div>
+          <div class="db">
+            <h3>Гаврилов Александр Дмитриевич</h3>
+            <div class="role">Стоматолог-ортопед</div>
+            <div class="meta"><span>В профессии с 2008 года</span><span class="rc"><svg><use href="#i-star"/></svg>14 отзывов</span></div>
+          </div>
+        </article>
+        <article class="doc">
+          <div class="ph"><img src="[EMBEDDED]" alt="Гудырев Денис Дмитриевич"></div>
+          <div class="db">
+            <h3>Гудырев Денис Дмитриевич</h3>
+            <div class="role">Стоматолог-ортопед</div>
+            <div class="meta"><span>В профессии с 2018 года</span><span class="rc"><svg><use href="#i-star"/></svg>4 отзыва</span></div>
+          </div>
+        </article>
+        </div>
+      </details>
+    </div>
+
+    <a class="btn ghost" href="#zapis" style="margin-top:32px">Записаться к врачу</a>
+  </div>
+</section>
+
+<!-- ——— отзывы ——— -->
+<section id="otzyvy">
+  <div class="wrap">
+    <h2>Отзывы</h2>
+    <p class="rev-sub">О хирургах, которые ставят импланты, и ортопедах, которые делают протез.
+      Отзывы и рейтинги врачей — с независимого сервиса ПроДокторов.</p>
+
+    <div class="rev">
+      <div class="rev-view">
+        <div class="rev-track">
+
+          <article class="rev-slide">
+            <div class="rs-photo"><img src="[EMBEDDED]" alt="Тайхузин Глеб Сергеевич"></div>
+            <div class="rs-body">
+              <div class="rs-top">
+                <div class="rs-src"><img class="pd-logo" src="[EMBEDDED]" alt="ПроДокторов"><span>Источник отзыва: Продокторов</span></div>
+                <div class="rs-badge">
+                  <div class="rs-rate"><b>4,9</b><span class="stars"><span class="st-base"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><span class="st-fill" style="width:98%"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span></span></div>
+                  <span class="rs-cap">Рейтинг врача на Продокторов</span>
+                </div>
+              </div>
+              <h3>Тайхузин Глеб Сергеевич</h3>
+              <div class="rs-role">Стоматолог-имплантолог, стоматолог-хирург</div>
+              <blockquote>Моя ситуация была сложной: требовалось удаление почти всех проблемных зубов на верхней челюсти и последующая имплантация. Весь процесс занял около года, но благодаря спокойствию, вниманию и высочайшей квалификации доктора я прошла через это без страха и осложнений.</blockquote>
+              <a class="rs-link" href="https://prodoctorov.ru/yaroslavl/vrach/534490-tayhuzin/" target="_blank" rel="noopener nofollow">Читать на сайте Продокторов</a>
+            </div>
+          </article>
+
+          <article class="rev-slide">
+            <div class="rs-photo"><img src="[EMBEDDED]" alt="Десяткин Илья Михайлович"></div>
+            <div class="rs-body">
+              <div class="rs-top">
+                <div class="rs-src"><img class="pd-logo" src="[EMBEDDED]" alt="ПроДокторов"><span>Источник отзыва: Продокторов</span></div>
+                <div class="rs-badge">
+                  <div class="rs-rate"><b>5,0</b><span class="stars"><span class="st-base"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><span class="st-fill" style="width:100%"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span></span></div>
+                  <span class="rs-cap">Рейтинг врача на Продокторов</span>
+                </div>
+              </div>
+              <h3>Десяткин Илья Михайлович</h3>
+              <div class="rs-role">Стоматолог-ортопед</div>
+              <blockquote>Использование 3D-технологий, точность, комфорт и полное отсутствие боли оставили только положительные впечатления. И самое главное — уже спустя несколько месяцев после серьёзной операции я была с новыми красивыми зубами.</blockquote>
+              <a class="rs-link" href="https://prodoctorov.ru/yaroslavl/vrach/156340-desyatkin/" target="_blank" rel="noopener nofollow">Читать на сайте Продокторов</a>
+            </div>
+          </article>
+
+          <article class="rev-slide">
+            <div class="rs-photo"><img src="[EMBEDDED]" alt="Геворкян Арарат Гарегинович"></div>
+            <div class="rs-body">
+              <div class="rs-top">
+                <div class="rs-src"><img class="pd-logo" src="[EMBEDDED]" alt="ПроДокторов"><span>Источник отзыва: Продокторов</span></div>
+                <div class="rs-badge">
+                  <div class="rs-rate"><b>4,7</b><span class="stars"><span class="st-base"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><span class="st-fill" style="width:94%"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span></span></div>
+                  <span class="rs-cap">Рейтинг врача на Продокторов</span>
+                </div>
+              </div>
+              <h3>Геворкян Арарат Гарегинович</h3>
+              <div class="rs-role">Челюстно-лицевой хирург, стоматолог-имплантолог</div>
+              <blockquote>Мне была проведена большая и сложная операция под наркозом: за один раз удалили шесть зубов, включая четыре зуба мудрости, а также сразу установили два импланта. Восстановление прошло удивительно легко — не было ни синяков, ни выраженного отёка, ни сильной боли.</blockquote>
+              <a class="rs-link" href="https://prodoctorov.ru/yaroslavl/vrach/262622-gevorkyan/" target="_blank" rel="noopener nofollow">Читать на сайте Продокторов</a>
+            </div>
+          </article>
+
+          <article class="rev-slide">
+            <div class="rs-photo"><img src="[EMBEDDED]" alt="Гаврилов Александр Дмитриевич"></div>
+            <div class="rs-body">
+              <div class="rs-top">
+                <div class="rs-src"><img class="pd-logo" src="[EMBEDDED]" alt="ПроДокторов"><span>Источник отзыва: Продокторов</span></div>
+                <div class="rs-badge">
+                  <div class="rs-rate"><b>5,0</b><span class="stars"><span class="st-base"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><span class="st-fill" style="width:100%"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span></span></div>
+                  <span class="rs-cap">Рейтинг врача на Продокторов</span>
+                </div>
+              </div>
+              <h3>Гаврилов Александр Дмитриевич</h3>
+              <div class="rs-role">Стоматолог-ортопед, высшая категория</div>
+              <blockquote>Он разработал план лечения, подход был комплексным, все этапы были тщательно продуманы, выверены и выполнены успешно. Работа была проделана масштабная — ортодонтия, хирургия и ортопедия. Результат превзошёл все ожидания.</blockquote>
+              <a class="rs-link" href="https://prodoctorov.ru/yaroslavl/vrach/105775-gavrilov/" target="_blank" rel="noopener nofollow">Читать на сайте Продокторов</a>
+            </div>
+          </article>
+
+          <article class="rev-slide">
+            <div class="rs-photo"><img src="[EMBEDDED]" alt="Мухлаев Алексей Федорович"></div>
+            <div class="rs-body">
+              <div class="rs-top">
+                <div class="rs-src"><img class="pd-logo" src="[EMBEDDED]" alt="ПроДокторов"><span>Источник отзыва: Продокторов</span></div>
+                <div class="rs-badge">
+                  <div class="rs-rate"><b>4,9</b><span class="stars"><span class="st-base"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><span class="st-fill" style="width:98%"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span></span></div>
+                  <span class="rs-cap">Рейтинг врача на Продокторов</span>
+                </div>
+              </div>
+              <h3>Мухлаев Алексей Федорович</h3>
+              <div class="rs-role">Стоматолог-хирург, стоматолог-имплантолог</div>
+              <blockquote>Врач очень внимательный, аккуратно удалил зуб и понятно объяснил, что делать дальше. Алексей Фёдорович просто великолепный доктор, огромное спасибо Вам!</blockquote>
+              <a class="rs-link" href="https://prodoctorov.ru/yaroslavl/vrach/531416-muhlaev/" target="_blank" rel="noopener nofollow">Читать на сайте Продокторов</a>
+            </div>
+          </article>
+
+          <article class="rev-slide">
+            <div class="rs-photo"><img src="[EMBEDDED]" alt="Матвеев Дмитрий Юрьевич"></div>
+            <div class="rs-body">
+              <div class="rs-top">
+                <div class="rs-src"><img class="pd-logo" src="[EMBEDDED]" alt="ПроДокторов"><span>Источник отзыва: Продокторов</span></div>
+                <div class="rs-badge">
+                  <div class="rs-rate"><b>4,2</b><span class="stars"><span class="st-base"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><span class="st-fill" style="width:84%"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span></span></div>
+                  <span class="rs-cap">Рейтинг врача на Продокторов</span>
+                </div>
+              </div>
+              <h3>Матвеев Дмитрий Юрьевич</h3>
+              <div class="rs-role">Стоматолог-ортопед</div>
+              <blockquote>Ставила у Дмитрия Юрьевича коронки на импланты и на депульпированные зубы. Очень довольна работой — всё максимально аккуратно и бережно. Дмитрий Юрьевич очень подробно отвечает на вопросы и, если надо, спокойно всё объясняет по несколько раз.</blockquote>
+              <a class="rs-link" href="https://prodoctorov.ru/yaroslavl/vrach/105763-matveev/" target="_blank" rel="noopener nofollow">Читать на сайте Продокторов</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <div class="rev-nav">
+        <button type="button" class="rev-btn" data-rev="prev" aria-label="Предыдущий отзыв"></button>
+        <div class="rev-count"><b>1</b><span>/ 6</span></div>
+        <button type="button" class="rev-btn next" data-rev="next" aria-label="Следующий отзыв"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ——— вопросы ——— -->
+<section>
+  <div class="wrap">
+    <h2>О чём спрашивают на приёме</h2>
+    <div class="faq">
+      <details open>
+        <summary>Больно ли ставить имплант?</summary>
+        <p>Операция проходит под анестезией, во время установки боли нет. После — возможен отёк и дискомфорт в течение нескольких дней, врач заранее назначает препараты. Длинные операции по All-on-4 проводятся под седацией: вы спите, за состоянием следит анестезиолог.</p>
+      </details>
+      <details>
+        <summary>Что делать, если кости не хватает?</summary>
+        <p>Объём кости оценивается по компьютерной томографии до начала лечения. Если её недостаточно, выполняется костная пластика или синус-лифтинг — это отдельный этап перед имплантацией. При протоколе All-on-4 импланты часто удаётся установить под наклоном в те участки, где кость сохранилась, и обойтись без наращивания.</p>
+      </details>
+      <details>
+        <summary>Сколько ходить без зубов после операции?</summary>
+        <p>Нисколько. При восстановлении всей челюсти временный протез фиксируется в день операции или на следующий день — вы уходите из клиники с зубами. При имплантации отдельных зубов на период приживления ставится временная коронка.</p>
+      </details>
+      <details>
+        <summary>Сколько служат импланты?</summary>
+        <p>На импланты Nobel Biocare производитель даёт пожизненную гарантию. Срок службы коронки зависит от материала и ухода — как правило, 10–15 лет и больше. Главное условие — профессиональная гигиена дважды в год и осмотры.</p>
+      </details>
+      <details>
+        <summary>Можно ли поставить импланты в возрасте?</summary>
+        <p>Возраст сам по себе противопоказанием не является — есть пациенты, которым импланты ставили после семидесяти. Значение имеет состояние здоровья: врач учитывает хронические заболевания, приём препаратов и результаты анализов. Часть ограничений снимается подготовкой.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ——— запись ——— -->
+<section class="book" id="zapis">
+  <div class="wrap book-grid">
+    <div>
+      <h2>Придите на диагностику — узнаете точную сумму</h2>
+      <p>Без осмотра и снимка назвать стоимость честно невозможно: она зависит от объёма кости и состояния соседних зубов. Консультация стоит 1 800 ₽ и занимает около часа.</p>
+      <ul class="list">
+        <li><svg><use href="#i-check"/></svg>Осмотр хирурга и ортопеда</li>
+        <li><svg><use href="#i-check"/></svg>Разбор снимка</li>
+        <li><svg><use href="#i-check"/></svg>План лечения и смета на руки</li>
+      </ul>
+    </div>
+
+    <form class="form" onsubmit="event.preventDefault(); this.querySelector('.btn').textContent='Заявка отправлена';">
+      <h3>Записаться на консультацию</h3>
+      <p class="hint">Перезвоним в течение рабочего дня и подберём удобное время.</p>
+      <div class="field">
+        <label for="nm">Как к вам обращаться</label>
+        <input id="nm" name="name" type="text" placeholder="Имя" required>
+      </div>
+      <div class="field">
+        <label for="ph">Телефон для связи</label>
+        <input id="ph" name="phone" type="tel" placeholder="+7 (___) ___-__-__" required>
+      </div>
+      <button class="btn" type="submit">Отправить заявку</button>
+      <p class="consent">Нажимая кнопку, вы соглашаетесь на обработку персональных данных и с политикой конфиденциальности клиники.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ——— подвал ——— -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img src="[EMBEDDED]" alt="Подмосковье — центр имплантации">
+        <div>ООО «МЦ „Подмосковье“»<br>Работаем с 1998 года</div>
+      </div>
+      <div>
+        <b>Контакты</b>
+        <a href="tel:+74852744545">+7 (4852) 74-45-45</a><br>
+        <a href="mailto:mail@mc-podmoskovie.ru">mail@mc-podmoskovie.ru</a>
+      </div>
+      <div>
+        <b>Адрес и время</b>
+        Ярославль, ул. Некрасова, 41<br>
+        Пн–Сб 8:00–20:30, Вс 8:30–17:00
+      </div>
+    </div>
+    <div class="legal">
+      Имеются противопоказания, необходима консультация специалиста. Лицензия на медицинскую деятельность.
+      Информация на странице не является публичной офертой; окончательная стоимость определяется после осмотра врача.
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var rev = document.querySelector('.rev');
+  if(!rev) return;
+  var track = rev.querySelector('.rev-track');
+  var slides = rev.querySelectorAll('.rev-slide');
+  var num = rev.querySelector('.rev-count b');
+  var i = 0;
+  function go(n){
+    i = (n + slides.length) % slides.length;
+    track.style.transform = 'translateX(' + (-i * 100) + '%)';
+    num.textContent = i + 1;
+  }
+  rev.querySelectorAll('[data-rev]').forEach(function(b){
+    b.addEventListener('click', function(){ go(b.dataset.rev === 'next' ? i + 1 : i - 1); });
+  });
+})();
+</script>
+

@@ -1,0 +1,3 @@
+const fs=require('fs'),p=require('postcss'); const root=p.parse(fs.readFileSync(require('path').join(__dirname,'styles.css'),'utf8'));const seen=new Map();let duplicates=[]; root.walkRules(r=>{let ctx=[];for(let a=r.parent;a.type!=='root';a=a.parent)ctx.unshift(a.name+':'+a.params);for(let sel of r.selectors)r.walkDecls(d=>{let k=ctx.join('|')+'|'+sel+'|'+d.prop+'|'+!!d.important;if(seen.has(k))duplicates.push({selector:sel,prop:d.prop,ctx:ctx.join('|'),before:seen.get(k),after:d.value});seen.set(k,d.value);});}); console.log(JSON.stringify(duplicates.slice(0,25),null,2));console.log('count',duplicates.length);
+
+if(duplicates.length)process.exit(1);

@@ -1,0 +1,112 @@
+<!DOCTYPE html><html lang="EN"><head><meta http-equiv="content-type" content="text/html; charset=windows-1251"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover"/><link rel="shortcut icon" href="/images/icons/favicons/fav_vk_video_2x.ico?8"/><link rel="apple-touch-icon" href="/images/icons/favicons/fav_vk_video.ico?9"/><meta name="robots" content="noindex, nofollow"/><title>VK</title><script>
+        window.isBFF = true
+        window.currentStateCode = 0
+        window.deferStaticEntries = []
+        window._onloadDeferCallbacks = []
+        window.lang = {"global_date":["","{day} {month} {year}","yesterday","today","tomorrow"],"global_date_l":["","{day} {month} {year}","yesterday","today","tomorrow"],"global_date_pre_free":["","{day} {month} {year}","yesterday","today","tomorrow"],"global_hours_ago":["","%s hour ago","%s hours ago"],"global_just_now":"just now","global_mins_ago":["","%s minute ago","%s minutes ago"],"global_short_date":["","{day} {month}","yesterday","today","tomorrow"],"global_short_date_time":["","{day} {month} at {hour}:{minute} {am_pm}","yesterday at {hour}:{minute} {am_pm}","today at {hour}:{minute} {am_pm}","tomorrow at {hour}:{minute} {am_pm}"],"global_short_date_time_l":["","{day} {month} at {hour}:{minute} {am_pm}","yesterday at {hour}:{minute} {am_pm}","today at {hour}:{minute} {am_pm}","tomorrow at {hour}:{minute} {am_pm}"],"global_short_date_time_pre_free":["","{day} {month} {hour}:{minute} {am_pm}","yesterday at {hour}:{minute} {am_pm}","today at {hour}:{minute} {am_pm}","tomorrow at {hour}:{minute} {am_pm}"],"global_word_hours_ago":["","one hour ago","two hours ago","three hours ago","four hours ago","five hours ago"],"global_word_mins_ago":["","one minute ago","two minutes ago","three minutes ago","4 minutes ago","5 minutes ago"],"months_of":{"1":"January","10":"October","11":"November","12":"December","2":"February","3":"March","4":"April","5":"May","6":"June","7":"July","8":"August","9":"September"},"months_sm_of":{"1":"Jan","10":"Oct","11":"Nov","12":"Dec","2":"Feb","3":"Mar","4":"Apr","5":"May","6":"Jun","7":"Jul","8":"Aug","9":"Sep"}}
+        window.vk = {
+            apiConfigDomains: {"apiDomain":"api.vkvideo.ru","connectDomain":"id.vk.ru","domain":"vkvideo.ru","loginDomain":"login.vk.ru"},
+            webToken: {"access_token":"anonym.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhbm9ueW1faWQiOjEwMDY0OTkwNzcsImFwcF9pZCI6NTI0NjEzNzMsImlhdCI6MTc4OTY1MDEyNSwiaXNfdmVyaWZpZWQiOmZhbHNlLCJleHAiOjE3ODk3MzY1MjUsInNpZ25lZF90aW1lIjpudWxsLCJhbm9ueW1faWRfbG9uZyI6OTEwOTQ4MDg3MDIxMTU0MzYyNSwic2NvcGUiOjc4ODEyOTkzNDc4OTgzNjh9.ZqrwCNmdUb6rXimHgbPLDUGIrKUBeqhzAMpTRw1eeEc","expired_at":1789736525,"is_anonym":true},
+            stDomain: "https://st.vkvideo.ru",
+            stExcludedMasks: null,
+            id: 0,
+            isCyrillic: false,
+            pabs: 0,
+            ex: {},
+            pe: {"frontend.remove_video_subtitles_from_api":1,"frontend.vkm_bff_web_redirect":1,"frontend.feed_clips_shops_block_mvk":1,"frontend.feed_clips_retention_block_mvk":1,"frontend.vkcom_video_card_view_log":1,"frontend.spa_article_page_web":1,"frontend.video_add_subscription_service_actualization":1,"frontend.embed_force_autoplay_next":1,"frontend.video_hide_playlist_id":1,"frontend.video_player_uv_stats_token_spa_embed":1,"frontend.wall_fix_prefetch":1,"frontend.bff_web_feed":1,"frontend.fix_vk_ru_default_host":1,"frontend.feed_similar_posts_get_custom":1,"frontend.video_get_by_ids_spa_video_page":1,"frontend.api_cache_enabled":1,"frontend.feed_fallback_default_locale":1,"frontend.scroll_to_comment":1,"frontend.video_web_spa_my_playlists_no_timeout":1,"frontend.disable_common_covers_of_videos":1,"frontend.feed_mobile_redirect":1,"frontend.video_player_overlay_reactions":1,"frontend.video_web_spa_cybersport_page_no_timeout":1,"frontend.web_vitals_browser":1,"frontend.video_render_sticker_comments":1,"frontend.video_send_sticker_comments":1,"frontend.video_web_new_movies_redirects":1,"frontend.video_web_spa_liked_no_timeout":1,"frontend.web_spa_stories_questions_mvk_redirects":1,"frontend.video_web_spa_lives_no_timeout":1,"frontend.feed_pixel_tracker_fetch":1,"frontend.api_groups_join_disable_grouping":1,"frontend.community_page_redirects_to_mvk":1,"frontend.fix_captcha_hitman_show":1,"frontend.video_spa_history_preview_player":1,"frontend.use_reserve_stats_url":1,"frontend.video_web_spa_history_no_timeout":1,"frontend.video_hint_audio_track":1,"frontend.vkm_channels_in_all_folder_mvk":1,"frontend.apps_spa_launch_requests_with_prefetch":1,"frontend.video_is_linked_playlist_enabled":1,"frontend.fix_query_web_to_mobile_redirect":1,"frontend.feed_spa_mvk":1,"frontend.video_web_spa_my_communities_no_timeout":1,"frontend.video_cards_click_logs":1,"frontend.web_track_events_fix":1,"frontend.audio_video_note_icon_for_music_video":1,"frontend.spa_article_page_mvk":1,"frontend.video_mobile_spa_video_watch_no_timeout":1,"frontend.web_prefetch_ignore_unkown_method":1,"frontend.mvk_owners_main_tab":1,"frontend.combine_ads_request":1,"frontend.feed_spa_old_cub_support":1,"frontend.use_bff_webtoken":1,"frontend.new_playlists_badges":1,"frontend.clips_mvk_fix_pagination":1,"frontend.wall_redirects_to_mvk_for_search_bots":1,"frontend.api_client_circuit_breaker":1,"frontend.mvk_api_hash_disable_api":1,"frontend.video_web_spa_tvshow_page_no_timeout":1,"frontend.video_get_web_token_statlog":1,"frontend.mvk_friends_birthdays_block":1,"frontend.log_games_catalog_for_unauth_in_web_mvk":1,"frontend.feed_spa_web":1,"frontend.spa_embed_fetch_retries":1,"frontend.stories_template_mvk":1,"frontend.web_statlogs_transport":1,"frontend.soccom_add_error_logs_for_market_and_attachments":1,"frontend.launch_from_api_spa_early":1,"frontend.community_reviews_redirects_to_mvk":1,"frontend.feed_device_info_volume":1,"frontend.feed_request_state_aborted_enabled":1,"frontend.mvk_clips_feed_ads_enabled":1,"frontend.index_page_redirect":1,"frontend.video_paid_subsc_disabled_anon":1,"frontend.video_users_get_prefetch_fields_change":1,"frontend.video_spa_embed_agw_vkvideo_web_token":1,"frontend.video_mobile_spa_playlist_no_timeout":1,"frontend.video_donut_badges":1,"frontend.search_preview_player_enabled":1,"frontend.music_playlist_to_url":1,"frontend.services_storefront_redirects_to_mvk":1,"frontend.video_video_page_comments_analytics":1,"frontend.fix_catalog_get_video_count_param":1,"frontend.video_web_new_mobile_redirects":1,"frontend.video_comments_sort_fix":1,"frontend.profile_redirects_to_mvk":1,"frontend.vkvideo_view_embed_spa_logs":1,"frontend.games_tags_genres_use_seo_description_block":1,"frontend.video_web_spa_bookmarks_no_timeout":1,"frontend.webinf_new_langs_lib":1,"frontend.firefox_deprecation_fixes":1,"frontend.wall_redirects_to_mvk":1,"frontend.spa_embed_disable_get_embed_prefetch":1,"frontend.video_replace_video_authors_landing_url":1,"frontend.stories_template_web":1,"frontend.feed_discover_media_get_custom":1,"frontend.games_web_catalog_pagination_fix":1,"frontend.video_catalog_sequential_merge_blocks":1,"frontend.video_embed_has_storage_access_logs":1,"frontend.embed_ad_events":1,"frontend.feed_first_page_cache_compressing":1,"frontend.video_web_spa_tvchannels_no_timeout":1,"frontend.video_dashboard_add_to_blacklist_list_filter":1,"frontend.video_messenger_preview_selector_fix":1,"frontend.prioritize_linked_to_playlist_marks_over_direct_url":1,"web_collect_lcp_element_resource_metrics":1,"core_spa_blocking":1,"web_tracer":1,"video_player_ref_domain_embed":1,"stickers.popup.vkcom":1,"stickers.ugc":1,"web_allow_prev_unknown_module":1,"web_vitals_inp":1,"video_short_redirect_to_player":1,"web_perf_core_vitals":1,"vmoji.promo.avatar_suggestion.promo_counter":1,"mini_apps_send_session_uuid_bridge_events":1,"vk_resource_timing_stats":1,"log_js_errors":1,"sentry_errors_fix":1,"navigation_timespent_analytics":1,"webinf_change_queue_analytics":1,"mini_apps_bridge_stats_bridge_log_field":1,"links_parsing_latin_domain_enabled":1,"loginvk_api_use_anonymous_token":1,"collect_ttlb":1,"web_box_loader_refresh_coords_disabled_on_reused":1,"video_live_legacy_product_card_analytics":1,"challenge_ajax_requests":1},
+            cfg: {"clips_encode_progress_attempts":300,"clips_encode_progress_delay":3000,"feed_redesign2024_percent_of_video_in_viewport_for_autoplay":70,"front_metric_scale":1000,"idle_tabs_log_interval":3600000,"indexeddb_cache_version":0,"langs_force_version":1,"performance_stats_core_modules_coefficients":{"market_catalog":1},"sentry_vkvideo_config_web":{"beforeSend":{"custom":true,"extension":true,"local":true,"unloading":true},"breadcrumbsLimit":5,"dsn":"https://efa96777c79b4ab4925936e4f31994dd@stacks.vk-portal.net/291","ignore":{"errors":{"base":true,"custom":true,"recommended":true},"urls":{"custom":true,"recommended":true}},"integrations":{"AlreadySent":true,"Breadcrumbs":true,"ContextLines":true,"CurModuleDiffIssues":true,"Deduplication":true,"ExtraErrorData":true,"InlineScriptTag":true,"KnownIssues":true,"LangLoadingIssues":true,"NonErrorException":true,"StaticLoadingIssues":true},"sentry":{"enabled":true},"tracer":{"enabled":true,"token_release":"gx35BR5FEE195yNBV3vWpHvXNErPSqXvcCWKYF3FRTv0","token_testing":"EaxftKGshhDLWJPZOkhpAP0eqfZqPk6NuU6zB5euPEM"},"version":1},"static_domain_excluded_masks":["loader_nav","lang","sw/","admin/","internal/","dyn-"],"support_community_link":"https://vk.com/dont_panic_42","videoplayer_history_record_watch_time":25,"vk_origin_frame_blacklist":["userapi.com"],"vk_resource_compression_map":{"domain":{"userapi.com":"5","vk.com":"1"},"type":{"audio":"5","beacon":"11","css":"2","early-hints":"4","fetch":"7","iframe":"8","image":"12","img":"6","link":"1","navigation":"10","other":"13","script":"3","xmlhttprequest":"9"}},"web_a11y_coverage_hash_prefixes":["fXD"],"web_ls_max_size":3145728,"web_perf_use_new_logic":true,"web_show_more_distance":1500},
+            toggles: {"feed_prefetch":{"abGroupId":null},"feed_spa_web":{"abGroupId":null},"video_embed_spa_bff_anon":{"abGroupId":10072435},"feed_audience_research":{"abGroupId":null}},
+            lang: 3,
+            isVideoStandalone: true,
+            logoutUrl: "",
+            rv: 245691,
+            ts: 1789650125,
+            statsMeta: {"platform":"web2","st":false,"id":0,"time":1789650125,"hash":"JHZz55evZpDjyJlYysqhOtazQc6IoJqGbV4ufwZihic","reloadVersion":42},
+            wsTransport: "https://stats.vk-portal.net",
+            reservedTransport: ["https://vkvideo.ru/usefull.php","https://vkvideo.ru/special.php"],
+            isOldBrowserVersion: false,
+			routerState: {"keyConfig":"main","data":{"params":{}}},
+			static: {
+                domain: "https://st.vkvideo.ru",
+        	},
+        };
+        window.langConfig = 
+	{"id":3,"parent":0,"locale":"en","numDel":",","numDelS":",","numDec":".","prepTags":null,"prep":[],"timeSys":["12hour","am","pm"],"yearOffset":0,"flexLast":false,"revOrder":false,"RTL":false,"numRules":{"int":[[0,[1],1],["*",0,2]],"float":2},"sexRules":[[1,2],["*",1]],"larr":"\u0026larr;","rarr":"\u0026rarr;"}
+        window.onLayoutReady = () => {};
+        window.apiPrefetchReadyPromise = new Promise((_resolve) => {
+  	        window.apiPrefetchReadyResolve = _resolve;
+  	    });
+        window.cur ??= {};
+	
+		window.cur.module ="video"
+		window.cur.screen ="embed"
+        window.cur.isVideoStandalone = true
+        window.vk.host = location.hostname;
+        window.addLangKeys = (keys, global) => {
+            var obj = global ? window : window.cur;
+            if (!obj.lang) {
+                obj.lang = keys;
+            } else {
+                extend(obj.lang, keys);
+            }
+        }
+        window.browser = {}
+
+        const isFunction = (obj) => obj && Object.prototype.toString.call(obj) === '[object Function]';
+
+        function extend() {
+            const args = arguments;
+            const length = args.length;
+            let target = args[0] || {};
+            let i = 1;
+            let deep = false;
+
+            if (typeof target === 'boolean') {
+                deep = target;
+                target = args[1] || {};
+                i = 2;
+            }
+
+            if (typeof target !== 'object' && !isFunction(target)) {
+                target = {};
+            }
+
+            for (; i < length; i++) {
+                const options = args[i];
+                if (options != null) {
+                    for (const name in options) {
+                        if (!options.hasOwnProperty(name)) {
+                            continue;
+                        }
+                        const src = target[name];
+                        const copy = options[name];
+
+                        if (target === copy) {
+                            continue;
+                        }
+
+                        if (deep && copy && typeof copy === 'object' && !copy.nodeType) {
+                            target[name] = extend(deep, src || (copy.length != null ? [] : {}), copy);
+                        } else if (copy !== undefined) {
+                            target[name] = copy;
+                        }
+                    }
+                }
+            }
+            return target;
+        }
+
+        window.extend = extend
+    </script>
+<script src="https://st.vkvideo.ru/dist/projects/vkvideo-embed/entrypoints/483.ff861d9b.js" async fetchpriority="high" onerror="window.dispatchEvent(new CustomEvent('static-loading-initial-issues-onerror', {detail:event}))"></script><script src="https://st.vkvideo.ru/dist/projects/vkvideo-embed/entrypoints/791.0a5d57f3.js" async fetchpriority="high" onerror="window.dispatchEvent(new CustomEvent('static-loading-initial-issues-onerror', {detail:event}))"></script><script src="https://st.vkvideo.ru/dist/projects/vkvideo-embed/entrypoints/error_monitoring.0b49ef04.js" async fetchpriority="high" onerror="window.dispatchEvent(new CustomEvent('static-loading-initial-issues-onerror', {detail:event}))"></script><script src="https://st.vkvideo.ru/dist/projects/vkvideo-embed/entrypoints/617.c083f953.js" async fetchpriority="high" onerror="window.dispatchEvent(new CustomEvent('static-loading-initial-issues-onerror', {detail:event}))"></script><link type="text/css" rel="preload" as="style" onload="const el = this.cloneNode(); el.rel = 'stylesheet'; el.removeAttribute('onload'); this.parentNode.insertBefore(el, this);" href="https://st.vkvideo.ru/dist/projects/vkvideo-embed/entrypoints/617.04599c89.css"><script src="https://st.vkvideo.ru/dist/projects/vkvideo-embed/entrypoints/core_spa.6dd9cd75.js" async fetchpriority="high" onerror="window.dispatchEvent(new CustomEvent('static-loading-initial-issues-onerror', {detail:event}))"></script><link type="text/css" rel="preload" as="style" onload="const el = this.cloneNode(); el.rel = 'stylesheet'; el.removeAttribute('onload'); this.parentNode.insertBefore(el, this);" href="https://st.vkvideo.ru/dist/projects/vkvideo-embed/entrypoints/core_spa.3b0b7e14.css"><script>
+try{(function(){"use strict";function e(){let e=!1;function n(n){if(!e){const r=URL.parse(n??"");if(!r)return;r.searchParams.append("back",window.location.href),e=!0,window.isRedirectChallenge=!0,window.location.href=r.toString()}}const r=undefined;new PerformanceObserver((e=>{for(const r of e.getEntries())if(r.serverTiming)for(const e of r.serverTiming){if("challenge"!==e.name)return;const{origin:i}=new URL(r.name);n(i+e.description)}})).observe({entryTypes:["navigation","resource"]})}return e})()();}catch(e){e.__inline_tag="challenge.js";e.name=`[challenge.js] ${e.name}`;throw e;}
+</script><script>
+try{(function(){"use strict";function t(){return window.location.hostname.includes("vkvideo")}function o(){return void 0!==navigator?.userAgentData?.mobile?navigator.userAgentData.mobile:/Mobile|mini|Fennec|Android|iP(ad|od|hone)/.test(navigator.userAgent)}function n(){const n=o(),i=t();"object"==typeof window.vk&&null!==window.vk||(window.vk={}),"object"==typeof window.vk.statsMeta&&null!==window.vk.statsMeta||(window.vk.statsMeta={}),"object"==typeof window.cur&&null!==window.cur||(window.cur={}),window.isMVK=n,window.cur.isVideoStandalone=i,window.vk.isVideoStandalone=i;const e=window.vk?.pe?.["frontend.stats_vk_platform"],a=window.vk.statsMeta.platform&&void 0!==window.vk.statsMeta.isMobilePlatform;e&&a||(window.vk.statsMeta.platform=n?"mvk":"web2",window.vk.statsMeta.isMobilePlatform=n)}return n})()();}catch(e){e.__inline_tag="appID.js";e.name=`[appID.js] ${e.name}`;throw e;}
+</script><style>
+.layout__layout--CS35M{position:absolute;top:0;right:0;bottom:0;left:0;overflow:hidden;background-color:#000}</style>
+</head><body><div id="spa_root"><div class="layout__layout--CS35M"></div></div>
+<script>
+window.cur.apiPrefetchCache = [{"method":"video.getPlayerConfig","request":{"module":"embed"},"version":"5.289","response":{"config":{"core":{"androidPreferredFormat":"dash","autoTrackSelection":{"bitrateFactorAtEmptyBuffer":2.8,"bitrateFactorAtFullBuffer":2,"trackCooldownDecreaseQuality":3000,"trackCooldownIncreaseQuality":15000},"autostartOnlyIfVisible":true,"chromecastPresentationApi":true,"chromecastReceiverId":"07A4434E","clearVideoElementInnerHTML":true,"collectingDecodingInfoEnabled":true,"configName":["use_smart_buffer"],"dash":{"abrVideoRules":["fits_container_rule","throughput_rule","buffer_rule","stalls_rule","upper_limit_rule","lower_limit_rule"],"codecsPrioritizeEnabled":true,"ignoreNetworkErrorsOnLoadInit":true,"qualityLimitsOnStall":{"resetQualityRestrictionTimeout":10000,"stallCountBeforeQualityDecrease":3,"stallDurationNoDataBeforeQualityDecrease":500},"rejectOnSourceOpenTimeout":true,"sourceOpenTimeout":3000,"useAbortMSEFix":true,"useDynamicBirtateRule":true,"useNewAbr":true,"useNewRepresentationSwitch":true,"useSmartRepresentationSwitch":true},"devNullLogEnabled":true,"handleExtendedNetworkErrorsSet":true,"iosPreferredFormat":"hls_fmp4","keepVideoElement":true,"maxPlaybackTransitionInterval":10000,"preferHDR":true,"preferMultiStream":true,"stallsManager":{"enabled":false},"useHlsJs":false,"useManagedMediaSource":true,"useNewAutoSelectVideoTrack":true,"useSafariEndlessRequestBugfix":true,"webmCodec":"av1"},"meta":["feature.apptracer","feature.collecting_codecs","feature.disable_pip_resize_handling","feature.extended_network_errors","feature.handle_recoverable_error","feature.hdr_av1","feature.hide_thumb_then_autoplay_enabled","feature.hls_fmp4","feature.keep_video_element","feature.playback_status_animation","feature.preview_timeline_with_hover","feature.save_preferred_states_on_user_action_only","feature.slow_video_notificiation","feature.ui_choose_first_audio_stream_from_adaptation_set","feature.use_smart_buffer","feature.x2_forward","module.embed"],"statistics":{"apiEnv":"okcdn","clearStorageAtUnload":false,"embedUrlParams":["partner_name"],"maxLoops":10000,"useVKComIsMobileLogic":true,"useVsid64":true,"watchCoverageInterval":30000,"watchCoverageTimeoutFix":true},"ui":{"ads":{"isVsidOriginal":true},"configName":["x2_forward"],"devNullLog":true,"disablePiPResizeHandling":true,"downloadVKLanguages":true,"features":{"apptracer":{"blackErrorCategoryList":[],"blackErrorIdList":[],"enabled":true,"sampleRate":1,"whiteErrorCategoryList":[],"whiteErrorIdList":[]},"audioLanguages":true,"canProviderHandleNetworkRecoverableError":true,"chooseFirstAudioStreamFromAdaptationSet":true,"disableThumbUnstartedOnAutoplay":true,"doubleForwardAvailable":true,"dpip":false,"episodesClustering":false,"forceAutoQualityWhenSevereStallHappens":false,"forcePlayerDisplayBlock":true,"interactiveAreaControlShadow":true,"interactiveControlsExpectTimeBlinkAnimation":true,"interactiveControlsFillAnimation":true,"interactiveControlsHideAnimation":true,"interactiveControlsTapPlace":true,"interactiveGraph":false,"interactiveHistoryEndChapterFix":false,"interactiveLastFrame":true,"interactiveTimeIndicator":true,"interactiveTimeOpenUri":true,"maxCountShowSlowVideoNotification":3,"mediaSession":false,"mobileSubMenuStretchHeight":true,"mobileVkLogoViewOnBottomControls":true,"nextPrevButtons":false,"pip":true,"playbackStatusAnimationDuration":1000,"playbackStatusNextVideoAnimationDuration":1000,"playbackStatusNextVideoShow":true,"playbackStatusShow":true,"qualityDetailsSubMenuEnabled":true,"rootStopPropagation":true,"savePreferredStatesOnUserActionOnly":true,"saveRate":true,"sentry":true,"showSlowVideoNotification":true,"thinStatistics":false,"thumbTimer":false,"timeoutShowSlowVideoNotification":600000,"usePreviewTimelineWithHovering":true,"userVideoPrefs":true},"logoType":"vk_video","sentry":{"sampleRate":0.01},"updateBuiltinLanguages":true,"view":{"timelineSliderFilledColor":"#0077FF"}}}}},{"method":"video.getHashes","request":{"video":"-202085834_456241716"},"version":"5.289","response":{"csrf":"c532bdcd40ffd382c1","video":"76eab6eb8fb499947d97e98064a248e4"}},{"method":"video.getOldWebAds","request":{"from_autoplay":0,"module":"embed","video":"-202085834_456241716"},"version":"5.289","response":{"ads":[]}}];
+window.apiPrefetchReadyResolve();
+</script>
+</body></html>
