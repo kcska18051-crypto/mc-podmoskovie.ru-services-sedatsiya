@@ -1,0 +1,165 @@
+{
+  "assets": [
+    {
+      "contentType": "text/css",
+      "id": "60035f302d9571a7",
+      "kind": "stylesheet",
+      "name": "player-component.css",
+      "path": "C:\\Users\\User\\AppData\\Local\\Temp/browser-use/assets/c8874481-72c8-4546-bda7-30a620a74ea2/60035f302d9571a7.css",
+      "url": "https://www.mc-podmoskovie.ru/bitrix/js/ui/volgaweb/youtube/player/player/dist/player-component.css?17196688552516"
+    },
+    {
+      "contentType": "text/css",
+      "id": "ae6123fbcbf52f95",
+      "kind": "stylesheet",
+      "name": "styles.f17632b4.css",
+      "path": "C:\\Users\\User\\AppData\\Local\\Temp/browser-use/assets/c8874481-72c8-4546-bda7-30a620a74ea2/ae6123fbcbf52f95.css",
+      "url": "https://www.mc-podmoskovie.ru/local/build/styles.f17632b4.css"
+    },
+    {
+      "contentType": "text/css",
+      "id": "862eb1f33e57dbf9",
+      "kind": "stylesheet",
+      "name": "ui.design-tokens.min.css",
+      "path": "C:\\Users\\User\\AppData\\Local\\Temp/browser-use/assets/c8874481-72c8-4546-bda7-30a620a74ea2/862eb1f33e57dbf9.css",
+      "url": "https://www.mc-podmoskovie.ru/bitrix/js/ui/design-tokens/dist/ui.design-tokens.min.css?171969127023463"
+    },
+    {
+      "contentType": "text/css",
+      "id": "2d7cc4a47601419a",
+      "kind": "stylesheet",
+      "name": "ui.font.opensans.min.css",
+      "path": "C:\\Users\\User\\AppData\\Local\\Temp/browser-use/assets/c8874481-72c8-4546-bda7-30a620a74ea2/2d7cc4a47601419a.css",
+      "url": "https://www.mc-podmoskovie.ru/bitrix/js/ui/fonts/opensans/ui.font.opensans.min.css?17196688442320"
+    },
+    {
+      "contentType": "text/css",
+      "id": "5e79f4454df828a0",
+      "kind": "stylesheet",
+      "name": "main.popup.bundle.min.css",
+      "path": "C:\\Users\\User\\AppData\\Local\\Temp/browser-use/assets/c8874481-72c8-4546-bda7-30a620a74ea2/5e79f4454df828a0.css",
+      "url": "https://www.mc-podmoskovie.ru/bitrix/js/main/popup/dist/main.popup.bundle.min.css?171966883626598"
+    },
+    {
+      "contentType": "text/css",
+      "id": "f6d647aab715482b",
+      "kind": "stylesheet",
+      "name": "page_9cc2066044004dea908a65c044d247d4_v1.css",
+      "path": "C:\\Users\\User\\AppData\\Local\\Temp/browser-use/assets/c8874481-72c8-4546-bda7-30a620a74ea2/f6d647aab715482b.css",
+      "url": "https://www.mc-podmoskovie.ru/bitrix/cache/css/s1/base/page_9cc2066044004dea908a65c044d247d4/page_9cc2066044004dea908a65c044d247d4_v1.css?17917922187448"
+    },
+    {
+      "contentType": "text/css",
+      "id": "0f2b746b116500cf",
+      "kind": "stylesheet",
+      "name": "template_4308581a29f1a52fb5ddd7f9d8c939e0_v1.css",
+      "path": "C:\\Users\\User\\AppData\\Local\\Temp/browser-use/assets/c8874481-72c8-4546-bda7-30a620a74ea2/0f2b746b116500cf.css",
+      "url": "https://www.mc-podmoskovie.ru/bitrix/cache/css/s1/base/template_4308581a29f1a52fb5ddd7f9d8c939e0/template_4308581a29f1a52fb5ddd7f9d8c939e0_v1.css?179179108826714"
+    },
+    {
+      "contentType": "text/css",
+      "id": "a47e192f4fcf4baa",
+      "kind": "stylesheet",
+      "name": "styles.f17632b4.css",
+      "path": "C:\\Users\\User\\AppData\\Local\\Temp/browser-use/assets/c8874481-72c8-4546-bda7-30a620a74ea2/a47e192f4fcf4baa.css",
+      "url": "https://www.mc-podmoskovie.ru/local/build/styles.f17632b4.css?v=1308"
+    },
+    {
+      "contentType": "text/css",
+      "id": "ea1e89eb0c6c914f",
+      "kind": "stylesheet",
+      "name": "swiper-bundle.min.css",
+      "path": "C:\\Users\\User\\AppData\\Local\\Temp/browser-use/assets/c8874481-72c8-4546-bda7-30a620a74ea2/ea1e89eb0c6c914f.css",
+      "url": "https://www.mc-podmoskovie.ru/local/templates/base/vendors/swiper/swiper-bundle.min.css?1728994678"
+    },
+    {
+      "contentType": "text/css",
+      "id": "853ab2571bbc6bea",
+      "kind": "stylesheet",
+      "name": "img-comparison-slider.css",
+      "path": "C:\\Users\\User\\AppData\\Local\\Temp/browser-use/assets/c8874481-72c8-4546-bda7-30a620a74ea2/853ab2571bbc6bea.css",
+      "url": "https://www.mc-podmoskovie.ru/local/templates/base/vendors/img-comparison-slider/img-comparison-slider.css?491925"
+    },
+    {
+      "contentType": "text/css",
+      "id": "90ffbe77da17165b",
+      "kind": "stylesheet",
+      "name": "anton-update.css",
+      "path": "C:\\Users\\User\\AppData\\Local\\Temp/browser-use/assets/c8874481-72c8-4546-bda7-30a620a74ea2/90ffbe77da17165b.css",
+      "url": "https://www.mc-podmoskovie.ru/local/templates/base/styles/anton-update.css?61492"
+    },
+    {
+      "contentType": "text/css",
+      "id": "932b7165e48d950c",
+      "kind": "stylesheet",
+      "name": "custom.css",
+      "path": "C:\\Users\\User\\AppData\\Local\\Temp/browser-use/assets/c8874481-72c8-4546-bda7-30a620a74ea2/932b7165e48d950c.css",
+      "url": "https://www.mc-podmoskovie.ru/local/templates/base/styles/custom.css?370901"
+    },
+    {
+      "contentType": "text/css",
+      "id": "ea4e67a786f8898c",
+      "kind": "stylesheet",
+      "name": "mikhail-update.css",
+      "path": "C:\\Users\\User\\AppData\\Local\\Temp/browser-use/assets/c8874481-72c8-4546-bda7-30a620a74ea2/ea4e67a786f8898c.css",
+      "url": "https://www.mc-podmoskovie.ru/local/templates/base/styles/mikhail-update.css?134794"
+    },
+    {
+      "contentType": "image/png",
+      "id": "c6d380a9f16a6661",
+      "kind": "image",
+      "name": "nobel__desktop.png",
+      "path": "C:\\Users\\User\\AppData\\Local\\Temp/browser-use/assets/c8874481-72c8-4546-bda7-30a620a74ea2/c6d380a9f16a6661.png",
+      "url": "https://www.mc-podmoskovie.ru/include/uslugi_land/implant/assets/images/nobel__desktop.png"
+    },
+    {
+      "contentType": "image/png",
+      "id": "72a2fb4e67d594a4",
+      "kind": "image",
+      "name": "All-on-4.png",
+      "path": "C:\\Users\\User\\AppData\\Local\\Temp/browser-use/assets/c8874481-72c8-4546-bda7-30a620a74ea2/72a2fb4e67d594a4.png",
+      "url": "https://www.mc-podmoskovie.ru/include/uslugi_land/implant/assets/images/implant_benefits/All-on-4.png"
+    },
+    {
+      "contentType": "image/png",
+      "id": "82c8115e16478925",
+      "kind": "image",
+      "name": "All-on-4__desktop.png",
+      "path": "C:\\Users\\User\\AppData\\Local\\Temp/browser-use/assets/c8874481-72c8-4546-bda7-30a620a74ea2/82c8115e16478925.png",
+      "url": "https://www.mc-podmoskovie.ru/include/uslugi_land/implant/assets/images/implant_benefits/All-on-4__desktop.png"
+    },
+    {
+      "contentType": "image/png",
+      "id": "1816c7891e8ff893",
+      "kind": "image",
+      "name": "nobel.png",
+      "path": "C:\\Users\\User\\AppData\\Local\\Temp/browser-use/assets/c8874481-72c8-4546-bda7-30a620a74ea2/1816c7891e8ff893.png",
+      "url": "https://www.mc-podmoskovie.ru/include/uslugi_land/implant/assets/images/nobel.png"
+    },
+    {
+      "contentType": "text/css",
+      "id": "11369950857d8f26",
+      "kind": "stylesheet",
+      "name": "modal-video.min.css",
+      "path": "C:\\Users\\User\\AppData\\Local\\Temp/browser-use/assets/c8874481-72c8-4546-bda7-30a620a74ea2/11369950857d8f26.css",
+      "url": "https://www.mc-podmoskovie.ru/include/uslugi_land/implant/assets/css/modal-video.min.css?v2.2"
+    },
+    {
+      "contentType": "text/css",
+      "id": "52bfcf4684769b06",
+      "kind": "stylesheet",
+      "name": "all.min.css",
+      "path": "C:\\Users\\User\\AppData\\Local\\Temp/browser-use/assets/c8874481-72c8-4546-bda7-30a620a74ea2/52bfcf4684769b06.css",
+      "url": "https://www.mc-podmoskovie.ru/local/templates/base/all.min.css"
+    }
+  ],
+  "directoryPath": "C:\\Users\\User\\AppData\\Local\\Temp/browser-use/assets/c8874481-72c8-4546-bda7-30a620a74ea2",
+  "failures": [],
+  "manifestPath": "C:\\Users\\User\\AppData\\Local\\Temp/browser-use/assets/c8874481-72c8-4546-bda7-30a620a74ea2/manifest.json",
+  "summary": {
+    "downloadedCount": 19,
+    "elapsedMs": 1760.6697000004351,
+    "failedCount": 0,
+    "requestedCount": 19
+  }
+}

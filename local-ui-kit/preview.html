@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Статус Nobel — визуал блока</title><link rel="stylesheet" href="nobel-status.css"></head>
+<body>
+<section class="nobel-status" aria-labelledby="nobel-title">
+  <div class="status-top">
+    <div class="status-copy">
+      <p class="status-label"><span aria-hidden="true">✦</span> СТАТУС ПОДТВЕРЖДЁН СЕРТИФИКАТАМИ</p>
+      <h1 id="nobel-title"><span>Единственный в Ярославской области</span> авторизованный центр All-on-4 Nobel Biocare</h1>
+      <p class="status-lead">Наши врачи прошли специальное обучение и работают по протоколам имплантации. Мы используем оригинальные импланты с пожизненной гарантией производителя.</p>
+    </div>
+    <div class="status-certificates">
+      <div class="cert-grid">
+        <button class="cert-button" type="button" data-year="2024" aria-label="Рассмотреть сертификат за 2024 год"><img src="assets/certificate-2024.jpg" alt="Сертификат авторизованного центра All-on-4 Nobel Biocare за 2024 год"></button>
+        <button class="cert-button" type="button" data-year="2025" aria-label="Рассмотреть сертификат за 2025 год"><img src="assets/certificate-2025.png" alt="Сертификат авторизованного центра All-on-4 Nobel Biocare за 2025 год"></button>
+        <button class="cert-button" type="button" data-year="2026" aria-label="Рассмотреть сертификат за 2026 год"><img src="assets/certificate-2026.png" alt="Сертификат авторизованного центра All-on-4 Nobel Biocare за 2026 год"></button>
+      </div>
+      <p class="cert-years"><span>2024</span><span>2025</span><span>2026</span></p>
+    </div>
+  </div>
+</section>
+<dialog class="cert-dialog"><button class="close-dialog" aria-label="Закрыть сертификат">×</button><h2>Сертификат All-on-4 Nobel Biocare</h2><img class="cert-full" alt=""><p class="cert-dialog-year"></p></dialog>
+<script>
+const modal=document.querySelector('dialog');document.querySelectorAll('.cert-button').forEach(button=>button.addEventListener('click',()=>{const image=button.querySelector('img');const full=modal.querySelector('.cert-full');full.src=image.src;full.alt=image.alt;modal.querySelector('.cert-dialog-year').textContent=button.dataset.year;modal.showModal()}));document.querySelector('.close-dialog').addEventListener('click',()=>modal.close());modal.addEventListener('click',e=>{if(e.target===modal){const r=modal.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)modal.close()}});const report=()=>{if(parent!==window)parent.postMessage({type:'nobel-preview-height',height:document.documentElement.scrollHeight},location.origin)};new ResizeObserver(report).observe(document.body);window.addEventListener('load',report);
+</script></body></html>
+
+
