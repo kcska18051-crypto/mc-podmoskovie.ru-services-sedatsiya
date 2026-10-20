@@ -1,6 +1,6 @@
 const fs=require('fs'),path=require('path');const read=f=>fs.readFileSync(path.join(__dirname,f),'utf8');const page=read('implant-full-preview.html');
 const checks={
-  'Главный баннер и показатели':page.includes('id="fp-hero"')&&read('integrated-implant-hero-preview.html').includes('[число]'),
+  'Главный баннер и показатели':page.includes('id="fp-hero"')&&read('integrated-implant-hero-preview.html').includes('Более 5 800'),
   'Стоимость и отдельные услуги':page.includes('id="fp-prices"')&&read('integrated-general-pricing-preview.html').includes('Отдельные услуги'),
   'Пять плашек услуг':(read('integrated-service-links-preview.html').match(/class="sl-item"/g)||[]).length===5,
   'Правка статуса центра':page.includes('Единственный в области Центр клинического мастерства Nobel Biocare'),
