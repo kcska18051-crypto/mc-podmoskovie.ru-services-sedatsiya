@@ -8,7 +8,7 @@ const checks={
   'Карусель из девяти слайдов':(page.match(/class="fp-carousel-slide"/g)||[]).length===9,
   'Planmeca, сканер и шаблоны':page.includes('Planmeca Viso G7')&&page.includes('цифровые оттиски')&&page.includes('assets/surgical-guide-reference.png'),
   'Отдельный блок гарантии':page.includes('id="fp-guarantee"'),
-  'Консультация: цена, время и КТ':read('integrated-consultation-preview.html').includes('от 1 000 ₽')&&read('integrated-consultation-preview.html').includes('около 40 минут')&&read('integrated-consultation-preview.html').includes('КТ при необходимости оплачивается отдельно'),
+  'Консультация: цена, время и КТ':read('integrated-consultation-preview.html').includes('от 1 800 ₽')&&read('integrated-consultation-preview.html').includes('около 40 минут')&&read('integrated-consultation-preview.html').includes('КТ при необходимости оплачивается отдельно'),
   'Восемь новых ответов плюс статус':(page.match(/id="fp-answer-/g)||[]).length===9,
   'Существующие шесть вопросов':page.includes('Что будет, если отложить имплантацию?')&&page.includes('Почему имплантация это лучший способ протезирования?'),
   'Налоговый вычет после FAQ':page.indexOf('id="fp-tax"')>page.indexOf('id="fp-answer-15"'),
