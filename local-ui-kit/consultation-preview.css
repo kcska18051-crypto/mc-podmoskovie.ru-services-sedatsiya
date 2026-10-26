@@ -6,4 +6,7 @@
 /* Full-width background, with the approved portrait composition on the site grid. */
 .cp{max-width:none;padding:0}.cp-banner-shell{background:linear-gradient(100deg,#0b98ab 0%,#52b5c3 55%,#a5d8df 100%)}.cp-banner-shell .cp-banner{max-width:1376px;margin-inline:auto;background:none}.cp-details{max-width:1376px;margin-inline:auto}@media(max-width:1000px){.cp{padding:0}}@media(max-width:700px){.cp{padding:0}}
 
-@media(min-width:701px){.cp-banner-shell .cp-team figure:last-child{right:0}}
+/* Let the portraits use the outer gutter without clipping at the content grid. */
+.cp-banner-shell{overflow:hidden}
+@media(min-width:1001px){.cp-banner-shell .cp-banner{overflow:visible}.cp-banner-shell .cp-team figure:last-child{width:80%;right:calc(-1 * clamp(0px,(100vw - 1376px)/2,129px))}}
+@media(min-width:701px) and (max-width:1000px){.cp-banner-shell .cp-team figure:last-child{width:72%;right:0}}
