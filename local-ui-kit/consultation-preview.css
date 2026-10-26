@@ -8,5 +8,5 @@
 
 /* Let the portraits use the outer gutter without clipping at the content grid. */
 .cp-banner-shell{overflow:hidden}
-@media(min-width:1001px){.cp-banner-shell .cp-banner{overflow:visible}.cp-banner-shell .cp-team figure:last-child{width:80%;right:calc(-1 * clamp(0px,(100vw - 1376px)/2,129px))}}
+@media(min-width:1001px){.cp-banner-shell .cp-banner{overflow:visible}.cp-banner-shell .cp-team figure:last-child{width:80%;height:75%;right:calc(-1 * clamp(0px,(100vw - 1376px)/2,129px))}}
 @media(min-width:701px) and (max-width:1000px){.cp-banner-shell .cp-team figure:last-child{width:72%;right:0}}
